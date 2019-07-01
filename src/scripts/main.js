@@ -17,10 +17,32 @@ function createWelcomePage() {
 welcomePageContainer.innerHTML = createWelcomePage()
 
 let loginButton = document.getElementById("login-btn").addEventListener("click", () => {
-    console.log("you clicked login")
+    createLoginPage()
 })
 
 
 let registerButton = document.getElementById("register-btn").addEventListener("click", () => {
-    console.log("you clicked register")
+    createRegisterPage()
 })
+
+function createLoginPage() {
+welcomePageContainer.innerHTML = `
+   <form id="login-form">
+   <h1>Login Form</h1>
+   <input type="text" required placeholder="user name">
+   <input type="text" required placeholder="email">
+   <button id="login-btn-submit">Login</button>
+   </form>
+   `
+}
+
+function createRegisterPage() {
+    welcomePageContainer.innerHTML = `
+    <form id="registration-form">
+    <h1>Registration Form</h1>
+    <input type="text" required placeholder="new user name">
+    <input type="text" required placeholder="your email address">
+    <button id="registration-button-submit">Register</button>
+    </form>
+    `
+}
