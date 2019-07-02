@@ -1,5 +1,6 @@
 import { createWelcomePage, welcomePageContainer } from "./welcome.js"
 import { getUserID } from "./api.js";
+import {createTaskPage} from "./task.js"
 
 function createLoginPage() {
     welcomePageContainer.innerHTML = `
@@ -32,7 +33,7 @@ function createLoginPage() {
                     alert("not a valid user name or email address")
                     }
             })
-
+            createTaskPage()
         })
     }
 
