@@ -28,7 +28,7 @@ function createRegisterPage() {
     }
 
     document.getElementById("registration-button-submit").addEventListener("click", () => {
-        let registerName= document.getElementById("reg-user-name").value
+        let registerName = document.getElementById("reg-user-name").value
         let registerEmail = document.getElementById("reg-email").value
         let newUserObject = createNewUser(registerName, registerEmail)
         let isThereAUser = false
