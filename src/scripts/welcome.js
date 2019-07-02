@@ -1,3 +1,5 @@
+import { getUserID, addNewUser } from "./api.js"
+
 
 
 let welcomePageContainer = document.getElementById("welcome-page")
@@ -51,17 +53,51 @@ function createRegisterPage() {
     <button id="registration-button-submit">Register</button>
     <button id="return-to-welcomepage2">Return to Welcome Page</button>
     `
+
+
     document.getElementById("return-to-welcomepage2").addEventListener("click", () => {
-        console.log("you clicked the register button")
         createWelcomePage()
     })
 
+    function createNewUser(userName, userEmail) {
+        return {
+            name: userName,
+            email: userEmail
+        }
+
+    }
+
     document.getElementById("registration-button-submit").addEventListener("click", () => {
-        console.log("you clicked the register button")
+        let registerName= document.getElementById("reg-user-name").value
+        let registerEmail = document.getElementById("reg-email").value
+        let newUserObject = createNewUser(registerName, registerEmail)
+        let isThereAUser = false
+       console.log(newUserObject)
+        getUserID()
+        .then( userData => {
+            userData.forEach(user => {
+                if (registerName === user.name || registerEmail === user.email) {
+                    alert("Sorry that Name or Email is taken, please choose another!")
+                    isThereAUser = true
+                }
+
+            })
+
+            if (isThereAUser === false) {
+                addNewUser(newUserObject)
+
+            }
+        })
+
+
     })
 }
 
 
+
+// else {
+//     addNewUser(newUserObject)
+// }
 
 
 
