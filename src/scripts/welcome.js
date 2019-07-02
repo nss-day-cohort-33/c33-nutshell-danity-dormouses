@@ -1,4 +1,4 @@
-import {createRegisterPage} from "./registrationpage"
+import {createRegisterPage} from "./registrationpage.js"
 
 
 
@@ -44,4 +44,4 @@ welcomePageContainer.innerHTML = `
 
 
 
-export {createWelcomePage, createLoginPage}
+export {createWelcomePage, createLoginPage, welcomePageContainer}
