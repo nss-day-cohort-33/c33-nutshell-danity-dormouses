@@ -1,5 +1,5 @@
 
-import {createWelcomePage, createLoginPage, createRegisterPage} from "./welcome.js"
+import {createWelcomePage,} from "./welcome.js"
 
 createWelcomePage()
 
