@@ -1,4 +1,5 @@
-import { getUserID, addNewUser } from "./api.js"
+import { getUserID, addNewUser} from "./api.js"
+import {welcomePageContainer, createWelcomePage} from "./welcome.js"
 
 
 
