@@ -1,4 +1,4 @@
-import { createChatBoard } from "./chats";
+import { createChatBoard, messageDisplay } from "./chats";
 
 
 let welcomePageContainer = document.getElementById("welcome-page")
@@ -9,6 +9,7 @@ welcomePageContainer.innerHTML = `
 <h1>GIGGLE KITTY DASHBOARD</h1>
 `
 chatBox.innerHTML = createChatBoard()
+messageDisplay()
 }
 
 

@@ -12,7 +12,4 @@ function addNewUser(newUser) {
 .then(results => results.json())
 }
 
-function addNewChat(textInput) {
-    return fetch("
-
 export {getUserID, addNewUser}
