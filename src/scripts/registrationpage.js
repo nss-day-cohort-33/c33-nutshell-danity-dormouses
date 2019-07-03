@@ -5,14 +5,12 @@ import {createDashBoard} from "./dashboard.js"
 
 function createRegisterPage() {
     welcomePageContainer.innerHTML = `
-
     <h1>Registration Form</h1>
     <input id="reg-user-name" type="text" placeholder="new user name">
     <input id="reg-email" type="text" placeholder="your email address">
     <button id="registration-button-submit">Register</button>
     <button id="return-to-welcomepage2">Return to Welcome Page</button>
     `
-
 
     document.getElementById("return-to-welcomepage2").addEventListener("click", () => {
         createWelcomePage()
@@ -23,7 +21,6 @@ function createRegisterPage() {
             name: userName,
             email: userEmail
         }
-
     }
 
     document.getElementById("registration-button-submit").addEventListener("click", () => {
