@@ -4,7 +4,13 @@ let eventPageContainer = document.querySelector("#event-page")
 
 
 // Declare a function that lays out the html format of the main task page
-
+function createEvent() {
+    let addEventBtn = document.createElement("button")
+    addTaskBtn.setAttribute("id", "event-btn" )
+    addEventBtn.textContent ="Add Event"
+    taskPageContainer.appendChild(h1TaskPage)
+    taskPageContainer.appendChild(addTaskBtn)
+}
 
 function createNewEventForm() {
   return `
