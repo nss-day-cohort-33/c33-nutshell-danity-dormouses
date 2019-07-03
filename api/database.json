@@ -61,6 +61,7 @@
       "id": 12
     },
     {
+<<<<<<< HEAD
       "name": "dfdfdfddfdfdfd",
       "email": "fsfsdfsdffdfdfds",
       "id": 13
@@ -79,6 +80,16 @@
       "name": "vv5v5",
       "email": "5e5yey",
       "id": 16
+=======
+      "name": "Cyler",
+      "email": "cyler@me.com",
+      "id": 13
+    },
+    {
+      "name": "special",
+      "email": "nothing",
+      "id": 14
+>>>>>>> master
     }
   ],
   "friends": [
@@ -87,6 +98,18 @@
       "users_id": 1,
       "users_id_fk": 2
     }
+  ],
+  "messages": [
+  {
+    "id": 1,
+    "userId": 1,
+    "message": "Hi friends!"
+  },
+  {
+    "id": 2,
+    "iserId": 3,
+    "message": "Wasup?!"
+  }
   ],
   "events": [
     {
