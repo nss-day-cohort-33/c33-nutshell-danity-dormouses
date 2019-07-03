@@ -13,5 +13,19 @@ function addNewUser(newUser) {
 }
 
 
+function getTaskID() {
+    return fetch("http://localhost:3000/tasks")
+    .then ( taskData => taskData.json())
+}
 
-export {getUserID, addNewUser}
+function addNewTask(newTask) {
+    return fetch("http://localhost:3000/tasks", {
+        method: "POST",
+        headers: { "Content-Type": "application/json"},
+        body: JSON.stringify(newTask)
+    })
+.then(results => results.json())
+}
+
+
+export {getUserID, addNewUser, addNewTask, getTaskID}

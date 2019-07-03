@@ -91,6 +91,11 @@
       "task": "clean litter box",
       "date": "now",
       "dateCompleted": "now, now"
+    },
+    {
+      "task": "Test Task",
+      "date": "2019-07-02",
+      "id": 2
     }
   ]
 }

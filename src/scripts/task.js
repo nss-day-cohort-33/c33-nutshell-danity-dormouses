@@ -1,4 +1,6 @@
 import {welcomePageContainer} from "./welcome.js"
+import {createNewTaskForm} from "./taskDOM.js"
+
 
 // Define variable to target html container for tasks
 let taskPageContainer = document.querySelector("#task-page")
@@ -9,35 +11,31 @@ function createTaskPage() {
 // Eventually tasks will need to be on the dashboard
 welcomePageContainer.innerHTML = ""
 let h1TaskPage = document.createElement("h1")
-let taskBtn = document.createElement("button")
+let addTaskBtn = document.createElement("button")
 taskPageContainer.appendChild(h1TaskPage)
-taskPageContainer.appendChild(taskBtn)
-taskBtn.setAttribute("id", "task-btn" )
+taskPageContainer.appendChild(addTaskBtn)
+addTaskBtn.setAttribute("id", "task-btn" )
 h1TaskPage.textContent = "Tasks To Complete"
-taskBtn.textContent ="Add Task"
+addTaskBtn.textContent ="Add Task"
 // add click event listener to the task button that will invoke the function to present the user
 // with input fields to enter their new task
-taskBtn.addEventListener("click", () => {
+addTaskBtn.addEventListener("click", () => {
     console.log("add task button clicked")
-    createTaskForm()
+    createNewTaskForm()
 })
 
 
 
 }
 
-function createTaskForm() {
-    taskPageContainer.innerHTML =
-    `
-    <h1>Enter New Task</h1>
-    <input id="task-name" type="text" placeholder="Enter Task Name">
-    <input id="task-completion-date" type="date">
 
-    `
-// let taskName = document.createElement("input")
-// let taskCompletionDate = document.createElement("input")
-// taskPageContainer.appendChild(taskName)
-// taskPageContainer.appendChild(taskCompletionDate)
+
+// Define factory function to create new Task object for database
+function createNewTaskObj(userTask, completiondate) {
+    return {
+        task: userTask,
+        date: completiondate
+    }
 
 }
 
@@ -45,4 +43,8 @@ function createTaskForm() {
 
 
 
-export{createTaskPage}
+
+
+
+
+export{createTaskPage, createNewTaskObj, taskPageContainer}
