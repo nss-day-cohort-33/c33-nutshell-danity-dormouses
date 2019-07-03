@@ -12,6 +12,4 @@ function addNewUser(newUser) {
 .then(results => results.json())
 }
 
-
-
 export {getUserID, addNewUser}
