@@ -1,3 +1,4 @@
+import {createDashBoard } from "./dashboard.js"
 
 // Define variable to target html container for tasks
 let eventPageContainer = document.querySelector("#event-page")
@@ -5,15 +6,17 @@ let eventPageContainer = document.querySelector("#event-page")
 
 // Declare a function that lays out the html format of the main task page
 function createEvent() {
-    let addEventBtn = document.createElement("button")
-    addTaskBtn.setAttribute("id", "event-btn" )
-    addEventBtn.textContent ="Add Event"
-    taskPageContainer.appendChild(h1TaskPage)
-    taskPageContainer.appendChild(addTaskBtn)
-}
+    eventPageContainer.innerHTML = `
+    <button id="new-event">New Event</button>
+    `
+    document.querySelector("#new-event").addEventListener("click", () => {
+        createNewEventForm()
+    })
+    }
+
 
 function createNewEventForm() {
-  return `
+    eventPageContainer.innerHTML = `
     <fieldset id="newEvent">
         <label for="event-name"><h4>Name: </h4></label>
         <input id="event-name" type="text" name="event-name" required>
@@ -25,19 +28,19 @@ function createNewEventForm() {
         <input id="event-location" type="text" name="event-location" required>
         <button class="save_events">Save Event</button>
     </fieldset>
-    `;
+    `
 }
-createNewEvent();
 
-function addEventListener() {
-  let newEvents = document.querySelector("#newEvent");
-  document.querySelector(".save_events").addEventListener("click", () => {
-    let eventName = document.querySelector("#event-name").value;
-    let eventDate = document.querySelector("#event-date").value;
-    let eventTime = document.querySelector("#event-time").value;
-    let eventLocation = document.querySelector("#event-location").value;
-  });
-}
+
+// function addEventListener() {
+//   let newEvents = document.querySelector("#new-event");
+//   document.querySelector(".save_events").addEventListener("click", () => {
+//     let eventName = document.querySelector("#event-name").value;
+//     let eventDate = document.querySelector("#event-date").value;
+//     let eventTime = document.querySelector("#event-time").value;
+//     let eventLocation = document.querySelector("#event-location").value;
+//   });
+// }
 
 // function createArticlesSection(user) {
 //     welcomePageContainer.innerHTML =
@@ -50,4 +53,4 @@ function addEventListener() {
 //     console.log(dataKeyUserName)
 //     console.log(dataKeyEmail)
 
-export { createNewEvent };
+export { createEvent };
