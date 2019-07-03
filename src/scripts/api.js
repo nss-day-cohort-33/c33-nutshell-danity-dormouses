@@ -27,5 +27,10 @@ function addNewTask(newTask) {
 .then(results => results.json())
 }
 
+function getTaskByUserID(userId) {
+    return fetch(`http://localhost:3000/tasks?userId=${userId}`)
+    .then ( taskData => taskData.json(),
+    )
+}
 
-export {getUserID, addNewUser, addNewTask, getTaskID}
+export {getUserID, addNewUser, addNewTask, getTaskID, getTaskByUserID}

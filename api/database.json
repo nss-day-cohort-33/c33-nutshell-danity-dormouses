@@ -92,35 +92,70 @@
   ],
   "tasks": [
     {
-      "id": 1,
-      "task": "clean litter box",
-      "date": "now",
-      "dateCompleted": "now, now"
+      "task": "Test Task 1",
+      "date": "2019-07-03",
+      "userId": "1",
+      "id": 1
     },
     {
-      "task": "Test Task",
-      "date": "2019-07-02",
+      "task": "Test Task 2",
+      "date": "2019-07-03",
+      "userId": "1",
       "id": 2
-    },
-    {
-      "task": "Dashboard Test Task",
-      "date": "2019-07-03",
-      "id": 3
-    },
-    {
-      "task": "dashboard test task 2",
-      "date": "2019-07-03",
-      "id": 4
     },
     {
       "task": "Test Task 3",
       "date": "2019-07-03",
+      "userId": "1",
+      "id": 3
+    },
+    {
+      "task": "Test Task 4",
+      "date": "2019-07-03",
+      "userId": "1",
+      "id": 4
+    },
+    {
+      "task": "test task 5",
+      "date": "2019-07-03",
+      "userId": "1",
       "id": 5
     },
     {
-      "task": "test tsk 4",
-      "date": "2019-07-03",
+      "task": "new task from mo",
+      "date": "2019-07-10",
+      "userId": "1",
       "id": 6
+    },
+    {
+      "task": "test task 7",
+      "date": "2019-07-03",
+      "userId": "1",
+      "id": 7
+    },
+    {
+      "task": "task 9",
+      "date": "2019-07-03",
+      "userId": "1",
+      "id": 8
+    },
+    {
+      "task": "task 10",
+      "date": "2019-07-03",
+      "userId": "1",
+      "id": 9
+    },
+    {
+      "task": "task 15",
+      "date": "2019-07-03",
+      "userId": "1",
+      "id": 10
+    },
+    {
+      "task": "task 17",
+      "date": "2019-07-03",
+      "userId": "1",
+      "id": 11
     }
   ]
 }

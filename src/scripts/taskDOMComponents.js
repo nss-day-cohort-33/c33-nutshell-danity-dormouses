@@ -1,7 +1,7 @@
 
 // let taskPageContainer = document.querySelector("#task-page")
 
-const makeTaskComponent = function(task) {
+function makeTaskComponent(task) {
     return `
     <div>
     <h3>${task.task}</h3>
@@ -25,6 +25,8 @@ const makeTaskComponent = function(task) {
     // div.setAttribute("id", `task-${task.id}`)
     // checkBox.setAttribute("id", `task-check`)
     // checkBox.setAttribute("class")
-}
+ }
+
+
 
 export{makeTaskComponent}
