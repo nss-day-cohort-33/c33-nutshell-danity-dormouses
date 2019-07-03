@@ -71,10 +71,18 @@
   "events": [
     {
       "id": 1,
+      "User_id": 6,
       "title": "Party at the Moon Tower",
       "date": "now",
       "time": "now",
       "location": "Moon Tower"
+    },
+    {
+      "title": "DUde",
+      "date": "here",
+      "time": "now",
+      "location": "there",
+      "id": 2
     }
   ],
   "news": [

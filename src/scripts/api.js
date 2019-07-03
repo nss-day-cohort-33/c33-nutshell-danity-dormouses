@@ -12,6 +12,13 @@ function addNewUser(newUser) {
 .then(results => results.json())
 }
 
+function addNewEvent(newEvent) {
+    return fetch("http://localhost:3000/events", {
+        method: "POST",
+        headers: { "Content-Type": "application/json"},
+        body: JSON.stringify(newEvent)
+    })
+    .then(events => events.json())
+}
 
-
-export {getUserID, addNewUser}
+export {getUserID, addNewUser, addNewEvent}
