@@ -1,6 +1,6 @@
 import { getUserID, addNewUser} from "./api.js"
 import {welcomePageContainer, createWelcomePage} from "./welcome.js"
-import {createDashBoard} from "./dashboard.js"
+import {createDashBoard, getTheUniqueUserID} from "./dashboard.js"
 
 
 function createRegisterPage() {
@@ -49,6 +49,7 @@ function createRegisterPage() {
                 sessionStorage.setItem("name", name)
                 sessionStorage.setItem("email", email)
                 addNewUser(newUserObject)
+                .then(user => sessionStorage.setItem("UserID", user.id))
                 createDashBoard()
 
             }

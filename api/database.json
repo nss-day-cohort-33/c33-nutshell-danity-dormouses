@@ -36,29 +36,49 @@
       "id": 7
     },
     {
-      "name": "Jeff Holmes",
-      "email": "nashville@pessimist.com",
+      "name": "blahblah",
+      "email": "h@ail.com",
       "id": 8
     },
     {
-      "name": "",
-      "email": "",
+      "name": "sw3gwe",
+      "email": "wegwegw",
       "id": 9
     },
     {
-      "name": "zzzzzzz",
-      "email": "zzzzzzz",
+      "name": "accacac",
+      "email": "acacaca",
       "id": 10
     },
     {
-      "name": "cccccccc",
-      "email": "cccccccc",
+      "name": "BBBB",
+      "email": "BBBB",
       "id": 11
     },
     {
-      "name": "afafwefwefwef2",
-      "email": "23r2ewfsdsfdsdfdfd",
+      "name": "dfdfdfd",
+      "email": "fdfdfd",
       "id": 12
+    },
+    {
+      "name": "dfdfdfddfdfdfd",
+      "email": "fsfsdfsdffdfdfds",
+      "id": 13
+    },
+    {
+      "name": "afasfa",
+      "email": "asfasfasf",
+      "id": 14
+    },
+    {
+      "name": "cddcdcsadfadf",
+      "email": "asfasfasfaf",
+      "id": 15
+    },
+    {
+      "name": "vv5v5",
+      "email": "5e5yey",
+      "id": 16
     }
   ],
   "friends": [
@@ -80,9 +100,41 @@
   "news": [
     {
       "id": 1,
+      "userID": 1,
       "url": "https://www.imdb.com/title/tt0387808/",
       "title": "End of the World",
       "synopsis": "Pestilence, War, Famine, Death"
+    },
+    {
+      "id": 2,
+      "userID": 1,
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage",
+      "title": "Session Storage",
+      "synopsis": "Learn basic session storage"
+    },
+    {
+      "url": "http://www.google.com",
+      "title": "something new",
+      "synopsis": "google",
+      "id": 3
+    },
+    {
+      "url": "",
+      "title": "",
+      "synopsis": "",
+      "id": 4
+    },
+    {
+      "url": "ssss",
+      "title": "sssss",
+      "synopsis": "sss",
+      "id": 5
+    },
+    {
+      "url": "",
+      "title": "",
+      "synopsis": "",
+      "id": 6
     }
   ],
   "tasks": [
