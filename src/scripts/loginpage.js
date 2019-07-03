@@ -1,6 +1,7 @@
 import { createWelcomePage, welcomePageContainer } from "./welcome.js"
 import { getUserID } from "./api.js";
 import {createTaskPage} from "./task.js"
+import {createDashBoard} from "./dashboard.js"
 
 function createLoginPage() {
     welcomePageContainer.innerHTML = `
@@ -26,7 +27,11 @@ function createLoginPage() {
                     if (loginName === user.name && loginEmail === user.email) {
                         alert("you are in")
                         letThemIn = true
-                        //create dashboard or insert link to?
+                        let name = loginName
+                        let email = loginEmail
+                        sessionStorage.setItem("name", name)
+                        sessionStorage.setItem("email", email)
+                        createDashBoard()
                     }
                 })
                     if (letThemIn === false) {

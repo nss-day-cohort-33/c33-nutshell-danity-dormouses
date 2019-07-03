@@ -1,7 +1,6 @@
 import { getUserID, addNewUser} from "./api.js"
 import {welcomePageContainer, createWelcomePage} from "./welcome.js"
-
-
+import {createDashBoard} from "./dashboard.js"
 
 
 function createRegisterPage() {
@@ -32,7 +31,8 @@ function createRegisterPage() {
         let registerEmail = document.getElementById("reg-email").value
         let newUserObject = createNewUser(registerName, registerEmail)
         let isThereAUser = false
-       console.log(newUserObject)
+
+
         getUserID()
         .then( userData => {
             userData.forEach(user => {
@@ -44,14 +44,21 @@ function createRegisterPage() {
             })
 
             if (isThereAUser === false) {
+                let name = registerName
+                let email = registerEmail
+                sessionStorage.setItem("name", name)
+                sessionStorage.setItem("email", email)
                 addNewUser(newUserObject)
+                createDashBoard()
 
             }
-        })
 
+
+        })
 
     })
 }
+
 
 
 export {createRegisterPage}
