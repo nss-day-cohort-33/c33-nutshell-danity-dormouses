@@ -1,6 +1,5 @@
 import { createWelcomePage, welcomePageContainer } from "./welcome.js"
 import { getUserID } from "./api.js";
-import {createTaskPage} from "./task.js"
 import {createDashBoard} from "./dashboard.js"
 
 function createLoginPage() {
@@ -29,8 +28,10 @@ function createLoginPage() {
                         letThemIn = true
                         let name = loginName
                         let email = loginEmail
+                        let id = `${user.id}`
                         sessionStorage.setItem("name", name)
                         sessionStorage.setItem("email", email)
+                        sessionStorage.setItem("id", id)
                         createDashBoard()
                     }
                 })
@@ -38,7 +39,6 @@ function createLoginPage() {
                     alert("not a valid user name or email address")
                     }
             })
-            createTaskPage()
         })
     }
 
