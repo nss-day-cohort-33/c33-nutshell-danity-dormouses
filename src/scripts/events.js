@@ -29,19 +29,14 @@ function createNewEventForm() {
     </fieldset>
     `;
   document.querySelector("#save_event").addEventListener("click", () => {
-    let eventName = document.querySelector("#event-name").value;
-    let eventDate = document.querySelector("#event-date").value;
-    let eventTime = document.querySelector("#event-time").value;
-    let eventLocation = document.querySelector("#event-location").value;
     let myNewEventName = {
-        title: eventName,
-        date: eventDate,
-        time: eventTime,
-        location: eventLocation
-    }
+      title: document.querySelector("#event-name").value,
+      date: document.querySelector("#event-date").value,
+      time: document.querySelector("#event-time").value,
+      location: document.querySelector("#event-location").value
+    };
     addNewEvent(myNewEventName);
   });
 }
-
 
 export { createEvent };
