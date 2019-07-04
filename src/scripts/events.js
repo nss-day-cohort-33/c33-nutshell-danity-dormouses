@@ -1,25 +1,22 @@
-import { createDashBoard } from "./dashboard.js";
 import { addNewEvent, getEventsForUser } from "./api.js";
 
 // Define variable to target html container for tasks
 let eventPageContainer = document.querySelector("#event-page");
 
-// Declare a function that lays out the html format of the main task page
+
 function createEvent() {
-    document.querySelector("#new-event").addEventListener("click", () => {
-        createNewEventForm();
-  eventPageContainer.innerHTML += `
+    eventPageContainer.innerHTML = `
     <button id="new-event">New Event</button>
     `;
-
-  getEventsForUser(sessionStorage.getItem("userId"))
-    .then(usersEvents => {
-    usersEvents.forEach(userEvent => {
-    eventPageContainer.innerHTML += userEventsPage(userEvent);
-    });
+    getEventsForUser(sessionStorage.getItem("userId")).then(usersEvents => {
+      usersEvents.forEach(userEvent => {
+        eventPageContainer.innerHTML += userEventsPage(userEvent);
+      });
+      document.querySelector("#new-event").addEventListener("click", () => {
+        createNewEventForm();
   });
+    });
 
-})
 }
 let userEventsPage = oneUserEvent => {
   return `
@@ -32,7 +29,6 @@ let userEventsPage = oneUserEvent => {
 
 // Create a function that gets all events for one user and renders to eventPageContainer
 // function
-
 function createNewEventForm() {
   eventPageContainer.innerHTML = `
     <fieldset id="newEvent">
@@ -55,7 +51,8 @@ function createNewEventForm() {
       time: document.querySelector("#event-time").value,
       location: document.querySelector("#event-location").value
     };
-    addNewEvent(myNewEvent);
+    addNewEvent(myNewEvent)
+    .then( () => createEvent())
   });
 }
 

@@ -5,5 +5,5 @@ import {createChatBoard} from "./chats.js"
 
 createWelcomePage()
 
-createChatBoard()
+// createChatBoard()
 
