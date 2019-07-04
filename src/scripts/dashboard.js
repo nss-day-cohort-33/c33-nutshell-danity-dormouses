@@ -1,4 +1,4 @@
-import {createEvent} from "./events.js"
+import {renderEventSection} from "./events.js"
 import { createChatBoard, messageDisplay } from "./chats";
 
 
