@@ -6,25 +6,32 @@ let eventPageContainer = document.querySelector("#event-page");
 
 // Declare a function that lays out the html format of the main task page
 function createEvent() {
-  eventPageContainer.innerHTML = `
-    <section>
-
-    </section>
+    document.querySelector("#new-event").addEventListener("click", () => {
+        createNewEventForm();
+  eventPageContainer.innerHTML += `
     <button id="new-event">New Event</button>
     `;
-  document.querySelector("#new-event").addEventListener("click", () => {
-    createNewEventForm();
+
+  getEventsForUser(sessionStorage.getItem("userId"))
+    .then(usersEvents => {
+    usersEvents.forEach(userEvent => {
+    eventPageContainer.innerHTML += userEventsPage(userEvent);
+    });
   });
+
+})
 }
+let userEventsPage = oneUserEvent => {
+  return `
+        <h4>title: ${oneUserEvent.title}</h4>
+        <p>date: ${oneUserEvent.date}</p>
+        <p>time: ${oneUserEvent.time}</p>
+        <p>location: ${oneUserEvent.location}</p>
+    `;
+};
 
-// Create a function that fetches all events for one user and renders to eventPageContainer
-// function  {
-
-
-// }
-getEventsForUser(17)
-.then(usersEvents => console.log(usersEvents))
-
+// Create a function that gets all events for one user and renders to eventPageContainer
+// function
 
 function createNewEventForm() {
   eventPageContainer.innerHTML = `
@@ -42,7 +49,7 @@ function createNewEventForm() {
     `;
   document.querySelector("#save_event").addEventListener("click", () => {
     let myNewEvent = {
-      userId: +(sessionStorage.getItem("userId")),
+      userId: +sessionStorage.getItem("userId"),
       title: document.querySelector("#event-name").value,
       date: document.querySelector("#event-date").value,
       time: document.querySelector("#event-time").value,

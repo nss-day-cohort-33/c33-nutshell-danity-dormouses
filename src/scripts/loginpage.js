@@ -24,20 +24,19 @@ function createLoginPage() {
             .then ( realUser => {
                 realUser.forEach(user => {
                     if (loginName === user.name && loginEmail === user.email) {
-                        alert("you are in")
                         letThemIn = true
                         let name = loginName
                         let email = loginEmail
                         sessionStorage.setItem("name", name)
                         sessionStorage.setItem("email", email)
                         sessionStorage.setItem("userId", user.id)
-                        }
                         createDashBoard()
+                        }
                     })
-                })
                     if (letThemIn === false) {
-                    alert("not a valid user name or email address")
+                        alert("not a valid user name or email address")
                     }
+                })
             })
 
 }

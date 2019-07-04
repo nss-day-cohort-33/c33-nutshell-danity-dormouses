@@ -84,6 +84,11 @@
       "name": "Pelon",
       "email": "Plata",
       "id": 17
+    },
+    {
+      "name": "Beyoncé",
+      "email": "name@youknow",
+      "id": 18
     }
   ],
   "friends": [
@@ -137,6 +142,14 @@
       "time": "19:00",
       "location": "Georgia",
       "id": 7
+    },
+    {
+      "userId": 18,
+      "title": "Jay Z is Bartending",
+      "date": "2019-07-16",
+      "time": "21:00",
+      "location": "Beyonce's house",
+      "id": 8
     }
   ],
   "news": [
