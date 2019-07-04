@@ -30,16 +30,18 @@ function createLoginPage() {
                         let email = loginEmail
                         sessionStorage.setItem("name", name)
                         sessionStorage.setItem("email", email)
+                        sessionStorage.setItem("userId", user.id)
+                        }
                         createDashBoard()
-                    }
+                    })
                 })
                     if (letThemIn === false) {
                     alert("not a valid user name or email address")
                     }
             })
 
-        })
-    }
+}
+
 
 
     export { createLoginPage }

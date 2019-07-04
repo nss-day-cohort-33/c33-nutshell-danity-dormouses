@@ -29,13 +29,14 @@ function createNewEventForm() {
     </fieldset>
     `;
   document.querySelector("#save_event").addEventListener("click", () => {
-    let myNewEventName = {
+    let myNewEvent = {
+      userId: sessionStorage.getItem("userId"),
       title: document.querySelector("#event-name").value,
       date: document.querySelector("#event-date").value,
       time: document.querySelector("#event-time").value,
       location: document.querySelector("#event-location").value
     };
-    addNewEvent(myNewEventName);
+    addNewEvent(myNewEvent);
   });
 }
 

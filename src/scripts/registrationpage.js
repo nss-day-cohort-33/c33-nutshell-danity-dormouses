@@ -46,8 +46,11 @@ function createRegisterPage() {
                 sessionStorage.setItem("name", name)
                 sessionStorage.setItem("email", email)
                 addNewUser(newUserObject)
+                .then(registeredUser => {
+                    sessionStorage.setItem("userId", registeredUser.id)
+                    console.log(registeredUser)
+                })
                 createDashBoard()
-
             }
 
 

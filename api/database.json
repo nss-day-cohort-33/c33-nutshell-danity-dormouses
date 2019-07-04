@@ -69,6 +69,16 @@
       "name": "special",
       "email": "nothing",
       "id": 14
+    },
+    {
+      "name": "holms",
+      "email": "sup",
+      "id": 15
+    },
+    {
+      "name": "sup",
+      "email": "man",
+      "id": 16
     }
   ],
   "friends": [
@@ -112,6 +122,14 @@
       "time": "6:00pm",
       "location": "1426 Lischey Ave",
       "id": 3
+    },
+    {
+      "userId": "16",
+      "title": "Sup man party",
+      "date": "sometime",
+      "time": "whenever",
+      "location": "locate by id",
+      "id": 4
     }
   ],
   "news": [
