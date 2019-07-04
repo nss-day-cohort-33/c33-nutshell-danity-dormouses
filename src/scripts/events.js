@@ -42,7 +42,7 @@ function createNewEventForm() {
     `;
   document.querySelector("#save_event").addEventListener("click", () => {
     let myNewEvent = {
-      userId: parseInt(sessionStorage.getItem("userId")),
+      userId: +(sessionStorage.getItem("userId")),
       title: document.querySelector("#event-name").value,
       date: document.querySelector("#event-date").value,
       time: document.querySelector("#event-time").value,

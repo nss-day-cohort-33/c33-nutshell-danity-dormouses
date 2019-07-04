@@ -129,6 +129,14 @@
       "time": "17:00",
       "location": "Moon Tower",
       "id": 6
+    },
+    {
+      "userId": 9,
+      "title": "Sherman's March",
+      "date": "2019-07-30",
+      "time": "19:00",
+      "location": "Georgia",
+      "id": 7
     }
   ],
   "news": [
