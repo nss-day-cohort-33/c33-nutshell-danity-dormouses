@@ -9,7 +9,7 @@ function createDashBoard() {
 welcomePageContainer.innerHTML = `
 <h1>GIGGLE KITTY DASHBOARD</h1>
 `
-createEvent()
+renderEventSection()
 
 chatBox.innerHTML = createChatBoard()
 messageDisplay()

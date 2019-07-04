@@ -3,7 +3,7 @@ import { addNewEvent, getEventsForUser } from "./api.js";
 // Define variable to target html container for tasks
 let eventPageContainer = document.querySelector("#event-page");
 
-function createEvent() {
+function renderEventSection() {
   eventPageContainer.innerHTML = `
     <button id="new-event">New Event</button>
     `;
@@ -53,8 +53,8 @@ function createNewEventForm() {
       time: document.querySelector("#event-time").value,
       location: document.querySelector("#event-location").value
     };
-    addNewEvent(myNewEvent).then(() => createEvent());
+    addNewEvent(myNewEvent).then(() => renderEventSection());
   });
 }
 
-export { createEvent };
+export { renderEventSection };
