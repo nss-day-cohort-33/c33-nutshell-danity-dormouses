@@ -1,13 +1,13 @@
 import { addNewEvent, getEventsForUser } from "./api.js";
 
 // Define variable to target html container by id for events
-let eventPageContainer = document.querySelector("#event-page");
+let eventPageContainer = document.querySelector(".event-page");
 
 // Write a function to create a form for a new event. Add an event listener that returns an object with the values of each field and the userId from session storage as a number. Then invoke api fectch POST and renderEventSection
 
 function createNewEventForm() {
   eventPageContainer.innerHTML = `
-      <fieldset id="newEvent">
+      <fieldset>
           <label for="event-name"><h4>Name: </h4></label>
           <input id="event-name" type="text" name="event-name" required>
           <label for="event-date"><h4>Date: </h4></label>
@@ -51,14 +51,14 @@ function renderEventSection() {
 
 let userEventsPage = oneUserEvent => {
   return `
-    <article>
-          <h2>Name: ${oneUserEvent.title}</h2>
+    <section class="newEvent">
+          <h2>${oneUserEvent.title}</h2>
           <ul class="eventDetails" style="list-style-type:none">
           <li>Date: ${oneUserEvent.date}</li>
           <li>Time: ${oneUserEvent.time}</li>
           <li>Location: ${oneUserEvent.location}</li>
           </ul>
-          </article>
+          </section>
       `;
     };
 
