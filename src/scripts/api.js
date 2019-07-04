@@ -21,4 +21,13 @@ function addNewEvent(newEvent) {
     .then(events => events.json())
 }
 
-export {getUserID, addNewUser, addNewEvent}
+function getEventsForUser(userId) {
+    return fetch(`http://localhost:3000/events?userId=${userId}&_sort=date`, {
+        method: "GET",
+        headers: { "Content-Type": "application/json"}
+    })
+    .then(userEvents => userEvents.json())
+}
+
+
+export {getUserID, addNewUser, addNewEvent, getEventsForUser}

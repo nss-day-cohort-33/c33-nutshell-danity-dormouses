@@ -30,7 +30,7 @@ function createRegisterPage() {
         let isThereAUser = false
 
 
-        getUserID()
+         getUserID()
         .then( userData => {
             userData.forEach(user => {
                 if (registerName === user.name || registerEmail === user.email) {
@@ -48,7 +48,6 @@ function createRegisterPage() {
                 addNewUser(newUserObject)
                 .then(registeredUser => {
                     sessionStorage.setItem("userId", registeredUser.id)
-                    console.log(registeredUser)
                 })
                 createDashBoard()
             }

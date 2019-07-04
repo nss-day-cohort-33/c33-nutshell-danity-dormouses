@@ -79,6 +79,11 @@
       "name": "sup",
       "email": "man",
       "id": 16
+    },
+    {
+      "name": "Pelon",
+      "email": "Plata",
+      "id": 17
     }
   ],
   "friends": [
@@ -102,34 +107,28 @@
   ],
   "events": [
     {
-      "id": 1,
-      "userId": 6,
-      "title": "Party at the Moon Tower",
-      "date": "now",
-      "time": "now",
-      "location": "Moon Tower"
-    },
-    {
-      "title": "DUde",
-      "date": "here",
-      "time": "now",
-      "location": "there",
-      "id": 2
-    },
-    {
-      "title": "BBQ party",
-      "date": "July 4, 2019",
-      "time": "6:00pm",
-      "location": "1426 Lischey Ave",
-      "id": 3
-    },
-    {
-      "userId": "16",
-      "title": "Sup man party",
-      "date": "sometime",
-      "time": "whenever",
-      "location": "locate by id",
+      "userId": 17,
+      "title": "No Pela Fiesta",
+      "date": "2019-07-12",
+      "time": "16:00",
+      "location": "Julian's Back Yard",
       "id": 4
+    },
+    {
+      "userId": 17,
+      "title": "Mucha Pela Fiesta",
+      "date": "2019-07-04",
+      "time": "16:00",
+      "location": "Julian's Back Yard",
+      "id": 5
+    },
+    {
+      "userId": 17,
+      "title": "Free Bird Party",
+      "date": "2019-07-10",
+      "time": "17:00",
+      "location": "Moon Tower",
+      "id": 6
     }
   ],
   "news": [
