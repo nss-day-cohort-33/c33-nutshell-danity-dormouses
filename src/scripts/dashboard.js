@@ -1,6 +1,9 @@
 import {createEvent} from "./events.js"
+import { createChatBoard, messageDisplay } from "./chats";
+
 
 let welcomePageContainer = document.getElementById("welcome-page")
+let chatBox = document.getElementById("chat-page")
 
 function createDashBoard() {
 welcomePageContainer.innerHTML = `
@@ -8,6 +11,8 @@ welcomePageContainer.innerHTML = `
 `
 createEvent()
 
+chatBox.innerHTML = createChatBoard()
+messageDisplay()
 }
 
 
@@ -16,4 +21,5 @@ createEvent()
 
 
 
-export { createDashBoard }
+
+export {createDashBoard}

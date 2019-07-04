@@ -59,6 +59,16 @@
       "name": "afafwefwefwef2",
       "email": "23r2ewfsdsfdsdfdfd",
       "id": 12
+    },
+    {
+      "name": "Cyler",
+      "email": "cyler@me.com",
+      "id": 13
+    },
+    {
+      "name": "special",
+      "email": "nothing",
+      "id": 14
     }
   ],
   "friends": [
@@ -67,6 +77,18 @@
       "users_id": 1,
       "users_id_fk": 2
     }
+  ],
+  "messages": [
+  {
+    "id": 1,
+    "userId": 1,
+    "message": "Hi friends!"
+  },
+  {
+    "id": 2,
+    "iserId": 3,
+    "message": "Wasup?!"
+  }
   ],
   "events": [
     {
