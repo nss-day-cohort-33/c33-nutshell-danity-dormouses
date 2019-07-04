@@ -3,27 +3,29 @@ import { addNewEvent, getEventsForUser } from "./api.js";
 // Define variable to target html container for tasks
 let eventPageContainer = document.querySelector("#event-page");
 
-
 function createEvent() {
-    eventPageContainer.innerHTML = `
+  eventPageContainer.innerHTML = `
     <button id="new-event">New Event</button>
     `;
-    getEventsForUser(sessionStorage.getItem("userId")).then(usersEvents => {
-      usersEvents.forEach(userEvent => {
-        eventPageContainer.innerHTML += userEventsPage(userEvent);
-      });
-      document.querySelector("#new-event").addEventListener("click", () => {
-        createNewEventForm();
-  });
+  getEventsForUser(sessionStorage.getItem("userId")).then(usersEvents => {
+    usersEvents.forEach(userEvent => {
+      eventPageContainer.innerHTML += userEventsPage(userEvent);
     });
-
+    document.querySelector("#new-event").addEventListener("click", () => {
+      createNewEventForm();
+    });
+  });
 }
 let userEventsPage = oneUserEvent => {
   return `
-        <h4>title: ${oneUserEvent.title}</h4>
-        <p>date: ${oneUserEvent.date}</p>
-        <p>time: ${oneUserEvent.time}</p>
-        <p>location: ${oneUserEvent.location}</p>
+  <article>
+        <h2>Name: ${oneUserEvent.title}</h2>
+        <ul class="eventDetails" style="list-style-type:none">
+        <li>Date: ${oneUserEvent.date}</li>
+        <li>Time: ${oneUserEvent.time}</li>
+        <li>Location: ${oneUserEvent.location}</li>
+        </ul>
+        </article>
     `;
 };
 
@@ -51,8 +53,7 @@ function createNewEventForm() {
       time: document.querySelector("#event-time").value,
       location: document.querySelector("#event-location").value
     };
-    addNewEvent(myNewEvent)
-    .then( () => createEvent())
+    addNewEvent(myNewEvent).then(() => createEvent());
   });
 }
 
