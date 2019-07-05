@@ -83,20 +83,17 @@ function editBtnListener() {
           <input id="event-time" type="time" name="event-time" value="${oneUserEvent.time}" required>
           <label for="event-location"><h4>Location: </h4></label>
           <input id="event-location" type="text" name="event-location" value="${oneUserEvent.location}" required>
-          <button id="save-event">Save Event</button>
+          <button id="saveEvent">Save Event</button>
       </fieldset>
 `;
         let editFormContainer = document.querySelector(`#eventElement-${oneUserEvent.id}`);
         editFormContainer.innerHTML = editEventForm;
-        document.querySelector(`#save-event-${oneUserEvent.id}`).addEventListener("click", event => {
-          let saveBtn = event.target.id;
-          let editedEvent = saveBtn.split("-")
-          console.log(editedEvent)
-        //   let editBtnIdArray = editBtnId.split("-");
-        //   let editBtnIdNum = editBtnIdArray[1];
-        //   let editedDetails = document.querySelector(`#save-event-${oneUserEvent.id}`);
-        //   console.log("editedDetails", editedDetails);
+        document.querySelector(`#saveEvent-${oneUserEvent.id}`).addEventListener("click", event => {
+            let saveBtn = event.target.id;
+            let editedEvent = saveBtn.split("-");
+            returnEventByID(editedEvent).then(() => renderEventSection())
         });
+
       });
     });
   });
