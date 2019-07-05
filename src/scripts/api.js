@@ -29,5 +29,25 @@ function getEventsForUser(userId) {
     .then(userEvents => userEvents.json())
 }
 
+function getEventById(eventId) {
+    return fetch(`http://localhost:3000/events/${eventId}`, {
+    method: "GET",
+    headers: { "Content-Type": "application/json"}
+})
+    .then(oneUserEvent => oneUserEvent.json())
+}
 
-export {getUserID, addNewUser, addNewEvent, getEventsForUser}
+function returnEventByID(eventId) {
+    return fetch(`http://localhost:3000/events/${eventId}`,{
+        mehod: "PUT",
+        headers: { "Content-Type": "application/json"
+    },
+        body: JSON.stringify(eventId)
+    })
+        .then(eventId => eventId.json())
+}
+
+
+
+
+export {getUserID, addNewUser, addNewEvent, getEventsForUser, getEventById, returnEventByID}
