@@ -28,10 +28,10 @@ function createLoginPage() {
                         letThemIn = true
                         let name = loginName
                         let email = loginEmail
-                        let id = `${user.id}`
+                        // let id = `${user.id}`
                         sessionStorage.setItem("name", name)
                         sessionStorage.setItem("email", email)
-                        sessionStorage.setItem("id", id)
+                        sessionStorage.getItem("userID", user.id)
                         createDashBoard()
                     }
                 })

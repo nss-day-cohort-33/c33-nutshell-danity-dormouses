@@ -18,10 +18,11 @@ function createRegisterPage() {
         createWelcomePage()
     })
 
-    function createNewUser(userName, userEmail) {
+    function createNewUser(userName, userEmail, userId) {
         return {
             name: userName,
-            email: userEmail
+            email: userEmail,
+            // userID: userId
         }
 
     }
@@ -46,9 +47,11 @@ function createRegisterPage() {
             if (isThereAUser === false) {
                 let name = registerName
                 let email = registerEmail
+                // let userID = `${user.id}`
                 sessionStorage.setItem("name", name)
                 sessionStorage.setItem("email", email)
                 addNewUser(newUserObject)
+                .then(user => sessionStorage.setItem("userID", `${user.id}`))
                 createDashBoard()
 
             }
