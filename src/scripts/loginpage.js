@@ -15,7 +15,6 @@ function createLoginPage() {
         createWelcomePage
         )
 
-
         document.getElementById("login-btn-submit").addEventListener("click", () => {
             let loginName = document.getElementById("login-user-name").value
             let loginEmail = document.getElementById("login-email").value

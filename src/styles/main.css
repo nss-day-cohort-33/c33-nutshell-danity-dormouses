@@ -1,4 +1,22 @@
-
+#dashboard-page {
+    display: grid;
+    grid-template-columns: 40px 50px auto 50px 40px;
+    grid-template-rows: 25% 200px auto;
+  }
+#event-page {
+    grid-column-start: 1;
+    grid-column-end: span col4-start;
+    grid-row-start: 2;
+    grid-row-end: span 2;
+    overflow: scroll;
+}
+#article-page {
+    grid-column-start: 3;
+    grid-column-end: span col4-start;
+    grid-row-start: 2;
+    grid-row-end: span 2;
+    overflow: scroll;
+}
 #event-page article:first-of-type {
     background-color: blanchedalmond;
     font-size: 1.25em;
@@ -6,13 +24,4 @@
 }
 .eventDetails {
     margin: 0em;
-}
-.newEvent {
-
-        height: 400px;
-        width: 200px;
-        padding: 10px;
-        border: 1px solid red;
-        background-color: var(--taco-sauce);
-
 }
