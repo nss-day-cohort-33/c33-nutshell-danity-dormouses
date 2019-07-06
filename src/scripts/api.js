@@ -1,6 +1,7 @@
+
 function getUserID() {
     return fetch("http://localhost:3000/users")
-    .then ( userData => userData.json())
+    .then( userData => userData.json())
 }
 
 function addNewUser(newUser) {
@@ -37,15 +38,15 @@ function getEventById(eventId) {
     .then(oneUserEvent => oneUserEvent.json())
 }
 
-function returnEventByID(eventId) {
-    return fetch(`http://localhost:3000/events/${eventId}`,{
+function returnEventByID(eventId, oneUserEvent) {
+    return fetch(`http://localhost:3000/events/${eventId}`, {
         mehod: "PUT",
-        headers: { "Content-Type": "application/json"
-    },
-        body: JSON.stringify(eventId)
+        headers: { "Content-Type": "application/json"},
+
     })
-        .then(eventId => eventId.json())
+        .then(updatedEvent => updatedEvent.json())
 }
+
 
 
 

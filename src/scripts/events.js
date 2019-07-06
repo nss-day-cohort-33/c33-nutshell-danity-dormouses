@@ -1,4 +1,6 @@
-import { addNewEvent, getEventsForUser, getEventById, returnEventByID } from "./api.js";
+import {
+    addNewEvent, getEventsForUser, getEventById, returnEventByID
+} from "./api.js";
 
 // Define variable to target html container by id for events
 
@@ -40,10 +42,10 @@ function renderEventSection() {
     `;
   getEventsForUser(sessionStorage.getItem("userId")).then(usersEvents => {
     usersEvents.forEach(userEvent => {
-      eventPageContainer.innerHTML += userEventsPage(userEvent);
+    eventPageContainer.innerHTML += userEventsPage(userEvent);
     });
     document.querySelector("#new-event").addEventListener("click", () => {
-      createNewEventForm();
+    createNewEventForm();
     });
     editBtnListener();
   });
@@ -75,6 +77,7 @@ function editBtnListener() {
       console.log(editBtnIdNum);
       getEventById(editBtnIdNum).then(oneUserEvent => {
         let editEventForm = `<fieldset>
+
           <label for="event-name"><h4>Name: </h4></label>
           <input id="event-name" type="text" name="event-name" value="${oneUserEvent.title}" required>
           <label for="event-date"><h4>Date: </h4></label>
@@ -83,7 +86,7 @@ function editBtnListener() {
           <input id="event-time" type="time" name="event-time" value="${oneUserEvent.time}" required>
           <label for="event-location"><h4>Location: </h4></label>
           <input id="event-location" type="text" name="event-location" value="${oneUserEvent.location}" required>
-          <button id="saveEvent">Save Event</button>
+          <button id="saveEvent-${oneUserEvent.id}">Save Event</button>
       </fieldset>
 `;
         let editFormContainer = document.querySelector(`#eventElement-${oneUserEvent.id}`);
@@ -91,12 +94,23 @@ function editBtnListener() {
         document.querySelector(`#saveEvent-${oneUserEvent.id}`).addEventListener("click", event => {
             let saveBtn = event.target.id;
             let editedEvent = saveBtn.split("-");
-            returnEventByID(editedEvent).then(() => renderEventSection())
-        });
-
+            let editBtnIdNum = editedEvent[1];
+            let updatedEvent = {
+                userId: +sessionStorage.getItem("userId"),
+                title: document.querySelector("#event-name").value,
+                date: document.querySelector("#event-date").value,
+                time: document.querySelector("#event-time").value,
+                location: document.querySelector("#event-location").value
+            }
+            returnEventByID(editBtnIdNum, updatedEvent).then( () => {
+                    renderEventSection();
+                    editBtnListener();
+            })
       });
-    });
+    })
   });
+})
 }
 
-export { renderEventSection };
+
+export { renderEventSection }
