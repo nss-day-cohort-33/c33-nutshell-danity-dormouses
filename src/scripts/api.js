@@ -40,11 +40,11 @@ function getEventById(eventId) {
 
 function returnEventByID(eventId, oneUserEvent) {
     return fetch(`http://localhost:3000/events/${eventId}`, {
-        mehod: "PUT",
+        method: "PUT",
         headers: { "Content-Type": "application/json"},
-
+        body: JSON.stringify(oneUserEvent)
     })
-        .then(updatedEvent => updatedEvent.json())
+        .then(updatedEvents => updatedEvents.json())
 }
 
 

@@ -1,6 +1,4 @@
-import {
-    addNewEvent, getEventsForUser, getEventById, returnEventByID
-} from "./api.js";
+import { addNewEvent, getEventsForUser, getEventById, returnEventByID } from "./api.js";
 
 // Define variable to target html container by id for events
 
