@@ -113,9 +113,9 @@
   "events": [
     {
       "userId": 17,
-      "title": "No Pela Fiesta",
+      "title": "Birthday",
       "date": "2019-07-12",
-      "time": "16:00",
+      "time": "23:00",
       "location": "Julian's Back Yard",
       "id": 4
     },
@@ -153,7 +153,7 @@
     },
     {
       "userId": 17,
-      "title": "Pelon Bday",
+      "title": "Pelon graduation",
       "date": "2019-07-23",
       "time": "03:00",
       "location": "Home",
@@ -161,36 +161,11 @@
     },
     {
       "userId": 9,
-      "title": "lkj;lk",
-      "date": "2019-07-17",
-      "time": "14:00",
-      "location": "street",
-      "id": 11
-    },
-    {
-      "userId": 9,
-      "title": "qqq",
-      "date": "2019-07-05",
-      "time": "13:59",
-      "location": "nn",
-      "id": 12
-    },
-    {
-      "userId": 9,
-      "title": "www",
-      "date": "",
-      "time": "",
-      "location": "",
-      "id": 13
-    },
-    {
-      "id": 14
-    },
-    {
-      "id": 15
-    },
-    {
-      "id": 16
+      "title": "Get Down",
+      "date": "2019-07-09",
+      "time": "13:00",
+      "location": "Barn",
+      "id": 10
     }
   ],
   "news": [
