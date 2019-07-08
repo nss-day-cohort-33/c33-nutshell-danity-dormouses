@@ -2,6 +2,8 @@ import { createWelcomePage, welcomePageContainer } from "./welcome.js"
 import { getUserID } from "./api.js";
 import {createDashBoard} from "./dashboard.js"
 
+
+
 function createLoginPage() {
     welcomePageContainer.innerHTML = `
 
@@ -24,18 +26,16 @@ function createLoginPage() {
             .then ( realUser => {
                 realUser.forEach(user => {
                     if (loginName === user.name && loginEmail === user.email) {
-                        alert("you are in")
                         letThemIn = true
-                        let name = loginName
-                        let email = loginEmail
-                        sessionStorage.setItem("name", name)
-                        sessionStorage.setItem("email", email)
+                        sessionStorage.setItem("UserID", user.id)
                         createDashBoard()
                     }
                 })
                     if (letThemIn === false) {
                     alert("not a valid user name or email address")
                     }
+
+
             })
 
         })

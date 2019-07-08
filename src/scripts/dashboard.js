@@ -4,21 +4,21 @@ import { createChatBoard, messageDisplay } from "./chats";
 let dashboardPage = document.getElementById("dashboard-page")
 let articlesSection = document.getElementById("article-page")
 let welcomePageContainer = document.getElementById("welcome-page")
-let physicalArticles = document.getElementById("article-articles")
 
 
 
 function createDashBoard() {
+let x = parseInt(sessionStorage.getItem("UserID"))
+console.log(x)
+
 welcomePageContainer.innerHTML = ""
 let title = document.createElement("h1")
 title.innerHTML = "Giggle Kitty Dashboard"
 dashboardPage.prepend(title)
 
-
-updateArticleSection()
+updateArticleSection(x)
 
 let chatBox = document.getElementById("chat-page")
-
 chatBox.innerHTML = createChatBoard()
 messageDisplay()
 }
@@ -26,13 +26,19 @@ messageDisplay()
 
 
 
-function updateArticleSection() {
+function updateArticleSection(x) {
 articlesSection.innerHTML = createArticlesSection()
-physicalArticles.innerHTML = postArticles()
-createNewArticleForm()
+postArticles(x)
+createNewArticleForm(x)
 }
 
 
 
 
-export {createDashBoard, updateArticleSection, getTheUniqueUserID}
+
+
+
+
+
+
+export {createDashBoard}

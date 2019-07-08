@@ -1,6 +1,6 @@
 import { getUserID, addNewUser} from "./api.js"
 import {welcomePageContainer, createWelcomePage} from "./welcome.js"
-import {createDashBoard, getTheUniqueUserID} from "./dashboard.js"
+import {createDashBoard} from "./dashboard.js"
 
 
 function createRegisterPage() {
@@ -44,13 +44,10 @@ function createRegisterPage() {
             })
 
             if (isThereAUser === false) {
-                let name = registerName
-                let email = registerEmail
-                sessionStorage.setItem("name", name)
-                sessionStorage.setItem("email", email)
                 addNewUser(newUserObject)
                 .then(user => sessionStorage.setItem("UserID", user.id))
-                createDashBoard()
+                alert("Thank you for Registering, please Login to go to your Dashboard")
+                createWelcomePage()
 
             }
 

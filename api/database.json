@@ -36,60 +36,59 @@
       "id": 7
     },
     {
-      "name": "blahblah",
-      "email": "h@ail.com",
+      "name": "tt22t",
+      "email": "3t3t",
       "id": 8
     },
     {
-      "name": "sw3gwe",
-      "email": "wegwegw",
+      "name": "",
+      "email": "",
       "id": 9
     },
     {
-      "name": "accacac",
-      "email": "acacaca",
+      "name": "r",
+      "email": "r",
       "id": 10
     },
     {
-      "name": "BBBB",
-      "email": "BBBB",
+      "name": "a",
+      "email": "a",
       "id": 11
     },
     {
-      "name": "dfdfdfd",
-      "email": "fdfdfd",
+      "name": "4",
+      "email": "4",
       "id": 12
     },
     {
-<<<<<<< HEAD
-      "name": "dfdfdfddfdfdfd",
-      "email": "fsfsdfsdffdfdfds",
+      "name": "7",
+      "email": "7",
       "id": 13
     },
     {
-      "name": "afasfa",
-      "email": "asfasfasf",
+      "name": "e",
+      "email": "e",
       "id": 14
     },
     {
-      "name": "cddcdcsadfadf",
-      "email": "asfasfasfaf",
+      "name": "64",
+      "email": "64",
       "id": 15
     },
     {
-      "name": "vv5v5",
-      "email": "5e5yey",
+      "name": "bb",
+      "email": "bb",
       "id": 16
-=======
-      "name": "Cyler",
-      "email": "cyler@me.com",
-      "id": 13
     },
     {
-      "name": "special",
-      "email": "nothing",
-      "id": 14
->>>>>>> master
+      "name": "ee",
+      "email": "ee",
+      "id": 17
+    },
+    {
+      "name": "s",
+      "email": "s",
+      "id": 18
     }
   ],
   "friends": [
@@ -100,16 +99,16 @@
     }
   ],
   "messages": [
-  {
-    "id": 1,
-    "userId": 1,
-    "message": "Hi friends!"
-  },
-  {
-    "id": 2,
-    "iserId": 3,
-    "message": "Wasup?!"
-  }
+    {
+      "id": 1,
+      "userId": 1,
+      "message": "Hi friends!"
+    },
+    {
+      "id": 2,
+      "iserId": 3,
+      "message": "Wasup?!"
+    }
   ],
   "events": [
     {
@@ -122,42 +121,81 @@
   ],
   "news": [
     {
-      "id": 1,
-      "userID": 1,
-      "url": "https://www.imdb.com/title/tt0387808/",
-      "title": "End of the World",
-      "synopsis": "Pestilence, War, Famine, Death"
+      "userId": 2,
+      "url": "http://www.google.com",
+      "title": "this is about the internet",
+      "synopsis": "a search engine",
+      "id": 10
     },
     {
-      "id": 2,
-      "userID": 1,
-      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage",
-      "title": "Session Storage",
-      "synopsis": "Learn basic session storage"
+      "userId": 12,
+      "url": "http://www.google.com",
+      "title": "testing for User12",
+      "synopsis": "this is a test",
+      "id": 29
     },
     {
+      "userId": 9,
+      "url": "",
+      "title": "",
+      "synopsis": "",
+      "id": 52
+    },
+    {
+      "userId": 9,
+      "url": "www.google.com",
+      "title": "TEST",
+      "synopsis": "TEST",
+      "id": 53
+    },
+    {
+      "userId": 12,
+      "url": "www.google.com",
+      "title": "something new",
+      "synopsis": "TEST",
+      "id": 55
+    },
+    {
+      "userId": null,
+      "url": "www.google.com",
+      "title": "something new",
+      "synopsis": "34g34g",
+      "id": 56
+    },
+    {
+      "userId": 16,
       "url": "http://www.google.com",
       "title": "something new",
-      "synopsis": "google",
-      "id": 3
+      "synopsis": "34g34g",
+      "id": 57
     },
     {
+      "userId": 17,
+      "url": "http://www.google.com",
+      "title": "aaa",
+      "synopsis": "aaaa",
+      "id": 58
+    },
+    {
+      "userId": 9,
       "url": "",
       "title": "",
       "synopsis": "",
-      "id": 4
+      "id": 59
     },
     {
-      "url": "ssss",
-      "title": "sssss",
-      "synopsis": "sss",
-      "id": 5
+      "userId": 11,
+      "url": "http://www.google.com",
+      "title": "gg",
+      "synopsis": "gg",
+      "id": 60
     },
     {
-      "url": "",
-      "title": "",
-      "synopsis": "",
-      "id": 6
+      "userId": 18,
+      "url": "http://www.google.com",
+      "title": "ss",
+      "synopsis": "fbfb",
+      "id": 61
     }
   ],
   "tasks": [

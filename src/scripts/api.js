@@ -12,8 +12,8 @@ function addNewUser(newUser) {
 .then(results => results.json())
 }
 
-function getArticles() {
-    return fetch("http://localhost:3000/news")
+function getArticles(userId) {
+    return fetch(`http://localhost:3000/news?userId=${userId}`)
     .then (newsArticles => newsArticles.json())
 }
 
@@ -26,7 +26,25 @@ function addNewArticle(newArticle) {
 .then(results => results.json())
 }
 
+function deleteArticle(articleID) {
+    return fetch(`http://localhost:3000/news/${articleID}`,{
+    method: "DELETE",
+    headers: {
+        "Content-Type": "application/json"
+    }
+  })
+}
+
+function updateArticle(updatedArticle) {
+    return fetch(`http://localhost:3000/news/${updatedArticle.id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(updatedArticle)
+    })
+
+}
 
 
-
-export {getUserID, addNewUser, getArticles, addNewArticle}
+export {getUserID, addNewUser, getArticles, addNewArticle, deleteArticle, updateArticle}
