@@ -1,5 +1,5 @@
 import {createNewTaskForm} from "./taskDOM.js"
-import { makeTaskComponent, markTaskComplete } from "./taskDOMComponents.js";
+import { makeTaskComponent, markTaskComplete, editTaskName} from "./taskDOMComponents.js";
 import { getTaskByUserID} from "./api.js"
 
 // Define variable to target html container for tasks
@@ -39,6 +39,7 @@ function createTaskPage() {
         })
             markTaskComplete()
 
+            editTaskName()
     })
 
 }
