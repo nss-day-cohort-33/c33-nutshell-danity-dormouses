@@ -26,12 +26,7 @@ function createLoginPage() {
                     if (loginName === user.name && loginEmail === user.email) {
                         alert("you are in")
                         letThemIn = true
-                        let name = loginName
-                        let email = loginEmail
-                        // let id = `${user.id}`
-                        sessionStorage.setItem("name", name)
-                        sessionStorage.setItem("email", email)
-                        sessionStorage.getItem("userID", user.id)
+                        sessionStorage.setItem("userId", user.id)
                         createDashBoard()
                     }
                 })

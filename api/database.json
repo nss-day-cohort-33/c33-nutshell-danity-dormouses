@@ -97,166 +97,88 @@
   ],
   "tasks": [
     {
-      "task": "Test Task 1",
-      "date": "2019-07-03",
-      "userId": "1",
-      "id": 1
-    },
-    {
-      "task": "Test Task 2",
-      "date": "2019-07-03",
-      "userId": "1",
-      "id": 2
-    },
-    {
-      "task": "Test Task 3",
-      "date": "2019-07-03",
-      "userId": "1",
-      "id": 3
-    },
-    {
-      "task": "Test Task 4",
-      "date": "2019-07-03",
-      "userId": "1",
-      "id": 4
-    },
-    {
-      "task": "test task 5",
-      "date": "2019-07-03",
-      "userId": "1",
-      "id": 5
-    },
-    {
-      "task": "new task from mo",
-      "date": "2019-07-10",
-      "userId": "1",
-      "id": 6
-    },
-    {
-      "task": "test task 7",
-      "date": "2019-07-03",
-      "userId": "1",
-      "id": 7
-    },
-    {
-      "task": "task 9",
-      "date": "2019-07-03",
-      "userId": "1",
-      "id": 8
-    },
-    {
-      "task": "task 10",
-      "date": "2019-07-03",
-      "userId": "1",
-      "id": 9
-    },
-    {
-      "task": "task 15",
-      "date": "2019-07-03",
-      "userId": "1",
-      "id": 10
-    },
-    {
-      "task": "task 17",
-      "date": "2019-07-03",
-      "userId": "1",
-      "id": 11
-    },
-    {
-      "task": "task 18",
-      "date": "2019-07-03",
-      "userId": "1",
-      "id": 12
-    },
-    {
       "task": "taks 19",
       "date": "2019-07-03",
-      "userId": "1",
-      "id": 13
+      "userId": 1,
+      "id": 13,
+      "complete": false
     },
     {
       "task": "test task 21",
       "date": "2019-07-03",
-      "userId": "1",
-      "id": 14
+      "userId": 1,
+      "id": 14,
+      "complete": false
     },
     {
       "task": "test task 22",
       "date": "2019-07-03",
-      "userId": "1",
-      "id": 15
+      "userId": 1,
+      "id": 15,
+      "complete": false
     },
     {
       "task": "Got the Save Task to work multiple times",
       "date": "2019-07-03",
-      "userId": "1",
-      "id": 16
+      "userId": 1,
+      "id": 16,
+      "complete": false
     },
     {
       "task": "Did you really?",
       "date": "2019-07-03",
-      "userId": "1",
-      "id": 17
+      "userId": 1,
+      "id": 17,
+      "complete": false
     },
     {
-      "task": "Jeff's first task",
-      "date": "2019-07-03",
-      "userId": "13",
-      "id": 18
-    },
-    {
-      "task": "Jeff's second task",
-      "date": "2019-07-03",
-      "userId": "13",
-      "id": 19
-    },
-    {
-      "task": "Jeff's third task",
-      "date": "2019-07-03",
-      "userId": "13",
-      "id": 20
-    },
-    {
-      "task": "Jeff's 4th task",
-      "date": "2019-07-03",
-      "userId": "13",
-      "id": 21
-    },
-    {
-      "task": "",
-      "date": "",
-      "userId": "13",
-      "id": 22
-    },
-    {
-      "task": "what's happening",
-      "date": "",
-      "userId": "13",
-      "id": 23
-    },
-    {
-      "task": "how about now",
+      "task": "howdy",
       "date": "2019-07-05",
-      "userId": "13",
-      "id": 24
+      "userId": 13,
+      "id": 31,
+      "complete": true
     },
     {
-      "task": "please work",
-      "date": "2019-07-05",
-      "userId": "13",
-      "id": 25
+      "task": "Sunday's task",
+      "date": "2019-07-07",
+      "userId": 13,
+      "id": 32,
+      "complete": true
     },
     {
-      "task": "please work again",
-      "date": "2019-07-06",
-      "userId": "13",
-      "id": 26
+      "task": "checkbox is working but DOM won't refresh",
+      "date": "2019-07-07",
+      "userId": 13,
+      "id": 33,
+      "complete": true
     },
     {
-      "task": "is it still working",
-      "date": "2019-07-06",
+      "task": "Mark task complete",
+      "date": "2019-07-07",
+      "userId": 13,
+      "id": 34,
+      "complete": true
+    },
+    {
+      "task": "does boolean work",
+      "date": "2019-07-07",
+      "userId": 13,
+      "complete": true,
+      "id": 35
+    },
+    {
+      "task": "asdfasdfsf",
+      "date": "2019-07-08",
       "userId": "13",
-      "id": 27
+      "complete": false,
+      "id": 36
+    },
+    {
+      "task": "checkbox working",
+      "date": "2019-07-08",
+      "userId": 13,
+      "complete": false,
+      "id": 37
     }
   ]
 }

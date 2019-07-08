@@ -1,5 +1,5 @@
 import {createNewTaskForm} from "./taskDOM.js"
-import { makeTaskComponent } from "./taskDOMComponents.js";
+import { makeTaskComponent, markTaskComplete } from "./taskDOMComponents.js";
 import { getTaskByUserID} from "./api.js"
 
 // Define variable to target html container for tasks
@@ -12,7 +12,7 @@ function createTaskPage() {
     // For testing we are just adding the task container to the welcome page
     // Eventually tasks will need to be on the dashboard
     // welcomePageContainer.innerHTML = ""
-    let userId = sessionStorage.getItem("id")
+    let userId = +sessionStorage.getItem("userId")
     let h1TaskPage = document.createElement("h1")
     let addTaskBtn = document.createElement("button")
     // let div = document.createElement("div")
@@ -23,9 +23,7 @@ function createTaskPage() {
     // taskPageContainer.appendChild(div)
     taskPageContainer.appendChild(h1TaskPage)
     taskPageContainer.appendChild(addTaskBtn)
-    // add click event listener to the task button that will invoke the function to present the user
-    // with input fields to enter their new task
-
+    // let deleteTask = document.querySelector("#")
     // Fetch call to GET all tasks by the userId of the person logged in
     // Loop through them and add them to the makeTaskComponent html string
     getTaskByUserID(userId)
@@ -39,9 +37,12 @@ function createTaskPage() {
             createNewTaskForm()
 
         })
+            markTaskComplete()
+
     })
 
 }
+
 
 
 
@@ -50,7 +51,8 @@ function createNewTaskObj(userTask, completiondate, userID) {
     return {
         task: userTask,
         date: completiondate,
-        userId: userID
+        userId: userID,
+        complete: false
     }
 
 }

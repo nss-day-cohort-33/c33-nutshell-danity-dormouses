@@ -45,13 +45,8 @@ function createRegisterPage() {
             })
 
             if (isThereAUser === false) {
-                let name = registerName
-                let email = registerEmail
-                // let userID = `${user.id}`
-                sessionStorage.setItem("name", name)
-                sessionStorage.setItem("email", email)
                 addNewUser(newUserObject)
-                .then(user => sessionStorage.setItem("userID", `${user.id}`))
+                .then(user => sessionStorage.setItem("userID", user.id))
                 createDashBoard()
 
             }
