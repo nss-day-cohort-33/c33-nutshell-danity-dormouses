@@ -1,74 +1,28 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Herman Munson",
-      "email": "herm@adamshouse.com"
+      "name": "",
+      "email": "",
+      "password": "",
+      "id": 1
     },
     {
-      "id": 2,
-      "name": "Lily Munson",
-      "email": "lily@adamshouse"
+      "name": "a",
+      "email": "a",
+      "password": "a",
+      "id": 2
     },
     {
-      "name": "John Smith",
-      "email": "smith@aol.com",
+      "name": "b",
+      "email": "b",
+      "password": "b",
       "id": 3
     },
     {
-      "name": "Lily Munson",
-      "email": "smith@aol.com",
+      "name": "c",
+      "email": "c",
+      "password": "c",
       "id": 4
-    },
-    {
-      "name": "Drew is a Dumbass",
-      "email": "idiotsRUS@helpme.com",
-      "id": 5
-    },
-    {
-      "name": "Slinky Wierdo",
-      "email": "shady@aol.com",
-      "id": 6
-    },
-    {
-      "name": "Roger Sterling",
-      "email": "blah@john.com",
-      "id": 7
-    },
-    {
-      "name": "Jeff Holmes",
-      "email": "nashville@pessimist.com",
-      "id": 8
-    },
-    {
-      "name": "",
-      "email": "",
-      "id": 9
-    },
-    {
-      "name": "zzzzzzz",
-      "email": "zzzzzzz",
-      "id": 10
-    },
-    {
-      "name": "cccccccc",
-      "email": "cccccccc",
-      "id": 11
-    },
-    {
-      "name": "afafwefwefwef2",
-      "email": "23r2ewfsdsfdsdfdfd",
-      "id": 12
-    },
-    {
-      "name": "Cyler",
-      "email": "cyler@me.com",
-      "id": 13
-    },
-    {
-      "name": "special",
-      "email": "nothing",
-      "id": 14
     }
   ],
   "friends": [
@@ -79,16 +33,48 @@
     }
   ],
   "messages": [
-  {
-    "id": 1,
-    "userId": 1,
-    "message": "Hi friends!"
-  },
-  {
-    "id": 2,
-    "iserId": 3,
-    "message": "Wasup?!"
-  }
+    {
+      "userId": 2,
+      "message": "how's this gonna...",
+      "userName": "a",
+      "id": 6
+    },
+    {
+      "userId": 4,
+      "message": "What? work?",
+      "userName": "c",
+      "id": 7
+    },
+    {
+      "userId": 3,
+      "message": "Maybe it doesn't matter!",
+      "userName": "b",
+      "id": 8
+    },
+    {
+      "userId": 2,
+      "message": "Ok, people. Why is this box above the message list?",
+      "userName": "a",
+      "id": 9
+    },
+    {
+      "userId": 4,
+      "message": "I think it's still working but it hasn't moved.",
+      "userName": "c",
+      "id": 10
+    },
+    {
+      "userId": 3,
+      "message": "Will it clear now?",
+      "userName": "b",
+      "id": 11
+    },
+    {
+      "userId": 4,
+      "message": "Ok why did it move?",
+      "userName": "c",
+      "id": 12
+    }
   ],
   "events": [
     {

@@ -1,15 +1,19 @@
-import { createChatBoard, messageDisplay } from "./chats";
+import { createChatBoard, messageDisplay, postMessages } from "./chats";
 
-
+let dashboardPage = document.getElementById("dashboard-page")
 let welcomePageContainer = document.getElementById("welcome-page")
-let chatBox = document.getElementById("chat-page")
 
 function createDashBoard() {
-welcomePageContainer.innerHTML = `
-<h1>GIGGLE KITTY DASHBOARD</h1>
-`
-chatBox.innerHTML = createChatBoard()
-messageDisplay()
+    let x = parseInt(sessionStorage.getItem("UserID"))
+    welcomePageContainer.innerHTML = ""
+    let title = document.createElement("h1")
+    title.innerHTML = "Giggle Kitty Dashboard"
+    dashboardPage.prepend(title)
+    let chatBox = document.getElementById("chat-page")
+    //let displayName = sessionStorage.getitem("")
+    chatBox.innerHTML = createChatBoard()
+    messageDisplay()
+    postMessages()
 }
 
 

@@ -8,6 +8,7 @@ function createLoginPage() {
        <h1>Login Form</h1>
        <input id="login-user-name" type="text" placeholder="user name">
        <input id="login-email" type="text" placeholder="email">
+       <input id="login-password" type="text" placeholder="password">
        <button id="login-btn-submit">Login</button>
        <button id="return-to-welcomepage1">Return to Welcome Page</button>
        `
@@ -19,17 +20,15 @@ function createLoginPage() {
         document.getElementById("login-btn-submit").addEventListener("click", () => {
             let loginName = document.getElementById("login-user-name").value
             let loginEmail = document.getElementById("login-email").value
+            let loginPassword = document.getElementById("login-password").value
             let letThemIn = false
             getUserID()
             .then ( realUser => {
                 realUser.forEach(user => {
-                    if (loginName === user.name && loginEmail === user.email) {
-                        alert("you are in")
+                    if (loginName === user.name && loginEmail === user.email && loginPassword === user.password) {
                         letThemIn = true
-                        let name = loginName
-                        let email = loginEmail
-                        sessionStorage.setItem("name", name)
-                        sessionStorage.setItem("email", email)
+                        sessionStorage.setItem("UserID", user.id)
+                        sessionStorage.setItem("userName", user.name)
                         createDashBoard()
                     }
                 })

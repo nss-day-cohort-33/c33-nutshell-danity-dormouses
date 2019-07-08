@@ -7,8 +7,10 @@ function createRegisterPage() {
     welcomePageContainer.innerHTML = `
 
     <h1>Registration Form</h1>
-    <input id="reg-user-name" type="text" placeholder="new user name">
-    <input id="reg-email" type="text" placeholder="your email address">
+    <div><input id="reg-user-name" type="text" placeholder="new user name"></div>
+    <div><input id="reg-email" type="text" placeholder="your email address"></div>
+    <div><input id="reg-password" type="text" placeholder="type password here"></div>
+    <div><input id="reg-password-verify" type="text" placeholder="re-type password"></div>
     <button id="registration-button-submit">Register</button>
     <button id="return-to-welcomepage2">Return to Welcome Page</button>
     `
@@ -18,10 +20,12 @@ function createRegisterPage() {
         createWelcomePage()
     })
 
-    function createNewUser(userName, userEmail) {
+    function createNewUser(userName, userEmail, passwordInput) {
         return {
             name: userName,
-            email: userEmail
+            email: userEmail,
+            password: passwordInput
+
         }
 
     }
@@ -29,7 +33,9 @@ function createRegisterPage() {
     document.getElementById("registration-button-submit").addEventListener("click", () => {
         let registerName = document.getElementById("reg-user-name").value
         let registerEmail = document.getElementById("reg-email").value
-        let newUserObject = createNewUser(registerName, registerEmail)
+        let registerPassword = document.getElementById("reg-password").value
+        let registerPasswordVerify = document.getElementById("reg-password-verify").value
+        let newUserObject = createNewUser(registerName, registerEmail, registerPassword)
         let isThereAUser = false
 
 
@@ -43,13 +49,18 @@ function createRegisterPage() {
 
             })
 
+            if(registerPassword !== registerPasswordVerify) {
+                document.getElementById("reg-password").value = ""
+                document.getElementById("reg-password-verify").value = ""
+                alert("Sorry, your passwords do not match!")
+                isThereAUser = true
+            }
+
             if (isThereAUser === false) {
-                let name = registerName
-                let email = registerEmail
-                sessionStorage.setItem("name", name)
-                sessionStorage.setItem("email", email)
                 addNewUser(newUserObject)
-                createDashBoard()
+                .then(user => sessionStorage.setItem("UserID", user.id))
+                alert("Thank you for Registering, please Login to go to your Dashboard")
+                createWelcomePage()
 
             }
 
