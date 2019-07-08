@@ -1,11 +1,18 @@
 
 import {createWelcomePage,} from "./welcome.js"
-import { markTaskComplete } from "./taskDOMComponents.js";
+import { createDashBoard } from "./dashboard.js";
 
 
 
 
-createWelcomePage()
+// createWelcomePage()
 
+if (sessionStorage.getItem("userId") === null) {
+    createWelcomePage()
+  }
+
+  else {
+    createDashBoard()
+  }
 
 
