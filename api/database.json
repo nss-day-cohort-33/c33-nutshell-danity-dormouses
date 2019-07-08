@@ -166,6 +166,14 @@
       "time": "13:00",
       "location": "Barn",
       "id": 10
+    },
+    {
+      "userId": 9,
+      "title": "",
+      "date": "",
+      "time": "",
+      "location": "",
+      "id": 11
     }
   ],
   "news": [

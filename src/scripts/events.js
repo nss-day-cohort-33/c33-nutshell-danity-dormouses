@@ -65,6 +65,7 @@ let userEventsPage = oneUserEvent => {
       `;
 };
 
+// Write a listener for the edit button that targets the array index of that event and then get events by userId
 function editBtnListener() {
   let editBtnArray = document.querySelectorAll(".editEventBtn");
   editBtnArray.forEach(editBtn => {
@@ -87,6 +88,7 @@ function editBtnListener() {
           <button id="saveEvent-${oneUserEvent.id}">Save Event</button>
       </fieldset>
 `;
+// Write new event listener for saving the edited event and PUT all events, including newly edited on back in db and DOM by UserId
         let editFormContainer = document.querySelector(`#eventElement-${oneUserEvent.id}`);
         editFormContainer.innerHTML = editEventForm;
         document.querySelector(`#saveEvent-${oneUserEvent.id}`).addEventListener("click", event => {
