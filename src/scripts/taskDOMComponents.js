@@ -1,11 +1,12 @@
 import { updateTask, getTaskID, getTaskByUserID } from "./api.js";
-
+import {createTaskEditForm, addTaskEditFormToDom} from "./task.js"
 
 function makeTaskComponent(task) {
   return `
     <div id="task-container-${task.id}">
     <fieldset>
     <h3 class="task-name" id="task-name-${task.id}">${task.task}</h3>
+    <input type="hidden" id="task-id-${task.id}" value=${task.id}>
     <label for="task-date"><strong>"Date to Complete"</strong></label>
     <li style="list-style-type:none" name="task-date">${task.date}</li>
     <label for="task-checkbox"><strong>"Click to Complete"</strong></label>
@@ -64,13 +65,22 @@ function editTaskName() {
     let taskName = document.querySelectorAll(".task-name")
     for(let i = 0; i < taskName.length; i++) {
         taskName[i].addEventListener("click", () => {
+            // console.log(taskName[i])
             let taskToEditId = event.target.id.split("-")[2]
+            let taskText = event.target.value
             let userId = +sessionStorage.getItem("userId")
-
+            let taskNameToEdit = document.querySelector(`#task-id-${taskToEditId}`)
+            taskNameToEdit.setAttribute("type", "text")
+            console.log(taskName)
             console.log("task name clicked")
             console.log(taskToEditId)
+            // let editTaskName = createTaskEditForm(taskToEditId)
+            // console.log(createTaskEditForm(taskToEditId))
+            // addTaskEditFormToDom()
         })
     }
 }
+
+
 
 export {makeTaskComponent, markTaskComplete, editTaskName}

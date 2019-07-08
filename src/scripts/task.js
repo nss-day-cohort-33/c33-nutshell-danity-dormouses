@@ -58,6 +58,22 @@ function createNewTaskObj(userTask, completiondate, userID) {
 
 }
 
+function createTaskEditForm(task) {
+    return `
+    <input type="text" id="edit-task-name" required value=${task.task}>
+    <input type="hidden" id="task-id" value=${task.id}>
+    `
+}
+
+function addTaskEditFormToDom(editName, editForm) {
+    document.querySelector(`#${editName}`).innerHTML = editForm
+    document.querySelector(".task-name").addEventListener("click", () => {
+        let name = document.querySelector("#edit-task-name").value
+        let taskId = document.querySelector("#task-id").value
+        let updatedTask = createNewTaskObj(name)
+        updatedTask.id = taskId
+    })
+}
 
 
 
@@ -65,5 +81,4 @@ function createNewTaskObj(userTask, completiondate, userID) {
 
 
 
-
-export{createTaskPage, createNewTaskObj, taskPageContainer, taskListContainer}
+export{createTaskPage, createNewTaskObj, taskPageContainer, taskListContainer, createTaskEditForm, addTaskEditFormToDom}
