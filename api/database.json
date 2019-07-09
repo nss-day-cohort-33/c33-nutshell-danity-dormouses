@@ -23,6 +23,24 @@
       "email": "c",
       "password": "c",
       "id": 4
+    },
+    {
+      "name": "mjb",
+      "email": "mjb",
+      "password": "mjb",
+      "id": 5
+    },
+    {
+      "name": "Jordan",
+      "email": "Jordan",
+      "password": "Jordan",
+      "id": 6
+    },
+    {
+      "name": "Adam",
+      "email": "Adam",
+      "password": "Adam",
+      "id": 7
     }
   ],
   "friends": [
@@ -34,46 +52,52 @@
   ],
   "messages": [
     {
+      "userId": null,
+      "message": "Good morning! Did you remember to order Clif Bars today?",
+      "userName": "Jordan",
+      "id": 1
+    },
+    {
       "userId": 2,
-      "message": "how's this gonna...",
-      "userName": "a",
+      "message": "Yeah.",
+      "userName": "mjb",
+      "id": 2
+    },
+    {
+      "userId": 5,
+      "message": "you misspelled hey",
+      "userName": "mjb",
+      "id": 3
+    },
+    {
+      "userId": null,
+      "message": "Sweet. Thanks, Mel Mel!",
+      "userName": "Jordan",
+      "id": 4
+    },
+    {
+      "userId": null,
+      "message": "Hi guys!!",
+      "userName": "Jordan",
+      "id": 5
+    },
+    {
+      "userId": 5,
+      "message": "come on now",
+      "userName": "mjb",
       "id": 6
     },
     {
-      "userId": 4,
-      "message": "What? work?",
-      "userName": "c",
+      "userId": 7,
+      "message": "Hi, it's Adam!",
+      "userName": "Adam",
       "id": 7
     },
     {
-      "userId": 3,
-      "message": "Maybe it doesn't matter!",
-      "userName": "b",
+      "userId": 7,
+      "message": "Guys, I accidentally deleted the quotation marks that WERE surrounding my \"sent\" messages. #oops",
+      "userName": "Adam",
       "id": 8
-    },
-    {
-      "userId": 2,
-      "message": "Ok, people. Why is this box above the message list?",
-      "userName": "a",
-      "id": 9
-    },
-    {
-      "userId": 4,
-      "message": "I think it's still working but it hasn't moved.",
-      "userName": "c",
-      "id": 10
-    },
-    {
-      "userId": 3,
-      "message": "Will it clear now?",
-      "userName": "b",
-      "id": 11
-    },
-    {
-      "userId": 4,
-      "message": "Ok why did it move?",
-      "userName": "c",
-      "id": 12
     }
   ],
   "events": [

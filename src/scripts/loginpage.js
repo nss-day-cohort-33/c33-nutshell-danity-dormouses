@@ -27,7 +27,7 @@ function createLoginPage() {
                 realUser.forEach(user => {
                     if (loginName === user.name && loginEmail === user.email && loginPassword === user.password) {
                         letThemIn = true
-                        sessionStorage.setItem("UserID", user.id)
+                        sessionStorage.setItem("userId", user.id)
                         sessionStorage.setItem("userName", user.name)
                         createDashBoard()
                     }
