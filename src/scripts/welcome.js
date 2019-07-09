@@ -1,6 +1,5 @@
 import {createRegisterPage} from "./registrationpage.js"
 import {createLoginPage} from "./loginpage.js"
-import { createDashBoard } from "./dashboard.js";
 
 
 let welcomePageContainer = document.getElementById("welcome-page")

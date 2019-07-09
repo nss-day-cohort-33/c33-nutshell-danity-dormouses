@@ -23,25 +23,12 @@
       "email": "zz",
       "password": "a",
       "id": 4
-    }
-  ],
-  "friends": [
-    {
-      "id": 1,
-      "userId": 1,
-      "userId_fk": 2
-    }
-  ],
-  "messages": [
-    {
-      "id": 1,
-      "userId": 1,
-      "message": "Hi friends!"
     },
     {
-      "id": 2,
-      "iserId": 3,
-      "message": "Wasup?!"
+      "name": "jeff",
+      "email": "jeff@jeff.com",
+      "password": "t",
+      "id": 5
     }
   ],
   "events": [
@@ -60,6 +47,38 @@
       "time": "00:02",
       "location": "nblah",
       "id": 16
+    },
+    {
+      "userId": 1,
+      "title": "Herman's house party",
+      "date": "2019-07-09",
+      "time": "12:59",
+      "location": "adams house",
+      "id": 17
+    },
+    {
+      "userId": 1,
+      "title": "hermans house part",
+      "date": "2019-07-09",
+      "time": "00:12",
+      "location": "adams house",
+      "id": 18
+    },
+    {
+      "userId": 5,
+      "title": "Nutshell is almost done",
+      "date": "2019-07-09",
+      "time": "00:12",
+      "location": "NSS",
+      "id": 19
+    },
+    {
+      "userId": 5,
+      "title": "Presentation",
+      "date": "2019-07-10",
+      "time": "00:12",
+      "location": "NSS",
+      "id": 20
     }
   ],
   "news": [
@@ -95,6 +114,24 @@
       "timeStamp": 1562683379187,
       "id": 5
     },
+    {
+      "userId": 1,
+      "url": "www.fuckthisshit.com",
+      "title": "Herman's first article",
+      "synopsis": "it's a test article",
+      "timeStamp": 1562701101371,
+      "id": 6
+    },
+    {
+      "userId": 5,
+      "url": "google.com",
+      "title": "Jeff's Article",
+      "synopsis": "let's go",
+      "timeStamp": 1562703205838,
+      "id": 7
+    }
+  ],
+  "friends": [
     {
       "userId": 2,
       "url": "http://www.google.com",
@@ -138,10 +175,179 @@
   ],
   "tasks": [
     {
-      "id": 1,
-      "task": "clean litter box",
-      "date": "now",
-      "dateCompleted": "now, now"
+      "task": "Hermans task",
+      "date": "2019-07-03",
+      "userId": 1,
+      "id": 13,
+      "complete": true
+    },
+    {
+      "task": "test task 21",
+      "date": "2019-07-03",
+      "userId": 1,
+      "id": 14,
+      "complete": false
+    },
+    {
+      "task": "test task 22",
+      "date": "2019-07-03",
+      "userId": 1,
+      "id": 15,
+      "complete": false
+    },
+    {
+      "task": "Got the Save Task to work multiple times",
+      "date": "2019-07-03",
+      "userId": 1,
+      "id": 16,
+      "complete": false
+    },
+    {
+      "task": "Did you really?",
+      "date": "2019-07-03",
+      "userId": 1,
+      "id": 17,
+      "complete": false
+    },
+    {
+      "task": "howdy",
+      "date": "2019-07-05",
+      "userId": 13,
+      "id": 31,
+      "complete": true
+    },
+    {
+      "task": "Sunday's task",
+      "date": "2019-07-07",
+      "userId": 13,
+      "id": 32,
+      "complete": true
+    },
+    {
+      "task": "checkbox is working but DOM won't refresh",
+      "date": "2019-07-07",
+      "userId": 13,
+      "id": 33,
+      "complete": true
+    },
+    {
+      "task": "does boolean work",
+      "date": "2019-07-07",
+      "userId": 13,
+      "complete": true,
+      "id": 35
+    },
+    {
+      "task": "it keeps working",
+      "date": "2019-07-08",
+      "userId": "13",
+      "complete": true,
+      "id": 36
+    },
+    {
+      "task": "it's kind of working",
+      "date": "2019-07-08",
+      "userId": 13,
+      "complete": true,
+      "id": 37
+    },
+    {
+      "task": "almost done",
+      "date": "2019-07-09",
+      "userId": 13,
+      "complete": true,
+      "id": 38
+    },
+    {
+      "task": "editing after click fixes",
+      "date": "2019-07-09",
+      "userId": 13,
+      "complete": true,
+      "id": 39
+    },
+    {
+      "task": "editing task name",
+      "date": "2019-07-09",
+      "userId": 13,
+      "complete": true,
+      "id": 40
+    },
+    {
+      "task": "asdding task",
+      "date": "2019-07-09",
+      "userId": 13,
+      "complete": true,
+      "id": 41
+    },
+    {
+      "task": "sdfgsdfgsd",
+      "date": "2019-07-09",
+      "userId": 13,
+      "complete": true,
+      "id": 42
+    },
+    {
+      "task": "keeping all event listeners",
+      "date": "2019-07-09",
+      "userId": 13,
+      "complete": true,
+      "id": 43
+    },
+    {
+      "task": "sdfgsdfg",
+      "date": "2019-07-09",
+      "userId": 13,
+      "complete": false,
+      "id": 44
+    },
+    {
+      "task": "fdgjtyudfghd",
+      "date": "2019-07-09",
+      "userId": 13,
+      "complete": false,
+      "id": 45
+    },
+    {
+      "task": "dsfhdfhgsdfgh",
+      "date": "2019-07-09",
+      "userId": 13,
+      "complete": false,
+      "id": 46
+    },
+    {
+      "task": "sadoifaseoirw3r23",
+      "date": "2019-07-09",
+      "userId": 13,
+      "complete": false,
+      "id": 47
+    },
+    {
+      "task": "34wt6wergg",
+      "date": "2019-07-09",
+      "userId": 13,
+      "complete": false,
+      "id": 48
+    },
+    {
+      "task": "looks like it's working",
+      "date": "2019-07-09",
+      "userId": 13,
+      "complete": true,
+      "id": 49
+    },
+    {
+      "task": "herman has another task",
+      "date": "2019-07-09",
+      "userId": 1,
+      "complete": false,
+      "id": 50
+    },
+    {
+      "task": "Jeff Has A Task",
+      "date": "2019-07-09",
+      "userId": 5,
+      "complete": false,
+      "id": 51
     }
   ]
 }
