@@ -1,98 +1,122 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Herman Munson",
-      "email": "herm@adamshouse.com"
-    },
-    {
-      "id": 2,
-      "name": "Lily Munson",
-      "email": "lily@adamshouse"
-    },
-    {
-      "name": "John Smith",
-      "email": "smith@aol.com",
-      "id": 3
-    },
-    {
-      "name": "Lily Munson",
-      "email": "smith@aol.com",
-      "id": 4
-    },
-    {
-      "name": "Drew is a Dumbass",
-      "email": "idiotsRUS@helpme.com",
-      "id": 5
-    },
-    {
-      "name": "Slinky Wierdo",
-      "email": "shady@aol.com",
-      "id": 6
-    },
-    {
-      "name": "Roger Sterling",
-      "email": "blah@john.com",
-      "id": 7
-    },
-    {
-      "name": "Jeff Holmes",
-      "email": "nashville@pessimist.com",
-      "id": 8
+      "name": "a",
+      "email": "a",
+      "password": "a",
+      "id": 1
     },
     {
       "name": "",
       "email": "",
-      "id": 9
+      "password": "",
+      "id": 2
     },
     {
-      "name": "zzzzzzz",
-      "email": "zzzzzzz",
-      "id": 10
+      "name": "o",
+      "email": "o",
+      "password": "y",
+      "id": 3
     },
     {
-      "name": "Mel",
-      "email": "madealogin@heckyeah.com",
-      "id": 11
-    },
-    {
-      "name": "afafwefwefwef2",
-      "email": "23r2ewfsdsfdsdfdfd",
-      "id": 12
-    },
-    {
-      "name": "jeff",
-      "email": "jeff@jeff.com",
-      "id": 13
-    },
-    {
-      "name": "ronald",
-      "email": "ronald",
-      "id": 14
-    }
-  ],
-  "friends": [
-    {
-      "id": 1,
-      "users_id": 1,
-      "users_id_fk": 2
+      "name": "zz",
+      "email": "zz",
+      "password": "a",
+      "id": 4
     }
   ],
   "events": [
     {
-      "id": 1,
-      "title": "Party at the Moon Tower",
-      "date": "now",
-      "time": "now",
-      "location": "Moon Tower"
+      "userId": 2,
+      "title": "Take out Trash",
+      "date": "2019-08-05",
+      "time": "15:05",
+      "location": "The backyard",
+      "id": 15
+    },
+    {
+      "userId": 2,
+      "title": "dfasfasf",
+      "date": "2019-07-10",
+      "time": "00:02",
+      "location": "nblah",
+      "id": 16
     }
   ],
   "news": [
     {
-      "id": 1,
-      "url": "https://www.imdb.com/title/tt0387808/",
-      "title": "End of the World",
-      "synopsis": "Pestilence, War, Famine, Death"
+      "userId": 2,
+      "url": "http://www.google.com",
+      "title": "I created this first but EDIT",
+      "synopsis": "First ",
+      "timeStamp": 1562683102097,
+      "id": 1
+    },
+    {
+      "userId": 2,
+      "url": "http://www.google.com",
+      "title": "I created this second",
+      "synopsis": "second",
+      "timeStamp": 1562681571810,
+      "id": 2
+    },
+    {
+      "userId": 2,
+      "url": "http://www.google.com",
+      "title": "I created this third",
+      "synopsis": "Third first edit",
+      "timeStamp": 1562681619086,
+      "id": 3
+    },
+    {
+      "userId": 2,
+      "url": "http://www.google.com",
+      "title": "Fifth NEW EDIT",
+      "synopsis": "5",
+      "timeStamp": 1562683379187,
+      "id": 5
+    }
+  ],
+  "friends": [
+    {
+      "userId": 2,
+      "url": "http://www.google.com",
+      "title": "sixth",
+      "synopsis": "6",
+      "timeStamp": 1562681898769,
+      "id": 6
+    },
+    {
+      "userId": 2,
+      "url": "http://www.google.com",
+      "title": "7",
+      "synopsis": "7",
+      "timeStamp": 1562683087895,
+      "id": 7
+    },
+    {
+      "userId": 2,
+      "url": "http://www.google.com",
+      "title": "create this last",
+      "synopsis": "last",
+      "timeStamp": 1562683353382,
+      "id": 8
+    },
+    {
+      "userId": 2,
+      "url": "http://www.google.com",
+      "title": "8",
+      "synopsis": "8",
+      "timeStamp": 1562683707472,
+      "id": 9
+    },
+    {
+      "userId": 2,
+      "url": "http://www.google.com",
+      "title": "10",
+      "synopsis": "10",
+      "timeStamp": 1562686588751,
+      "id": 10
     }
   ],
   "tasks": [

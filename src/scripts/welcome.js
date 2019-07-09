@@ -1,5 +1,6 @@
 import {createRegisterPage} from "./registrationpage.js"
 import {createLoginPage} from "./loginpage.js"
+import { createDashBoard } from "./dashboard.js";
 
 
 let welcomePageContainer = document.getElementById("welcome-page")
@@ -26,19 +27,6 @@ function createWelcomePage() {
 
 
 
-// function createLoginPage() {
-// welcomePageContainer.innerHTML = `
-
-//    <h1>Login Form</h1>
-//    <input type="text" placeholder="user name">
-//    <input type="text" placeholder="email">
-//    <button id="login-btn-submit">Login</button>
-//    <button id="return-to-welcomepage1">Return to Welcome Page</button>
-//    `
-//    document.getElementById("return-to-welcomepage1").addEventListener("click",
-//     createWelcomePage
-//     )
-// }
 
 
 export {createWelcomePage, welcomePageContainer}
