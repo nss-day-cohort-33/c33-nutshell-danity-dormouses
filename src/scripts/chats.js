@@ -1,49 +1,96 @@
 import {createDashboard} from "./dashboard.js"
-//import {getUserID} from "./api.js"
-
-//create a button by which the user can publish their message to the public chat board
-//create a box that holds the public messages and limits the number viewed.
-
-//the container for chats is ID-ed "chat-page"
-// let dataKeyUserName = sessionStorage.getItem("name")
-// let dataKeyUserEmail = sessionStorage.getItem("email")
+import { create } from "domain";
+import { addNewMessage, getMessages, editMessage } from "./api.js"
 
 
 let chatBox = document.getElementById("chat-page")
 
 function createChatBoard () {
     return `
-    <fieldset id="top-box"></fieldset>
-    <textarea id="bottom-box" maxLength="300" rows="1" cols="50" placeholder="chat with the nutshell community..."></textarea>
+    <input id="bottom-box" type="text" placeholder="chat with everyone..."></input>
     <button id="submit-btn" type="button">send</button>
     `
 }
 
+let chatArea = document.getElementById("top-box")
+
 function messageDisplay() {
-document.getElementById("submit-btn").addEventListener("click", () => {
-    let message = document.getElementById("bottom-box").value
-    let messageDisplayPlace = document.getElementById("top-box")
-    messageDisplayPlace.textContent = message
+    document.getElementById("submit-btn").addEventListener("click", () => {
+        let x = sessionStorage.getItem("userName")
+        let y = sessionStorage.getItem("UserID")
+        let message = document.getElementById("bottom-box").value
+        let newMessageDiv = document.createElement("div")
+        newMessageDiv.innerHTML += `${x} : ${message}`
+        chatArea.appendChild(newMessageDiv)
+        let createNewMessageObject = createNewMessage(y, message)
+        addNewMessage(createNewMessageObject)
+    })
+}
+
+function postMessages() {
+    chatArea.innerHTML = ""
+    getMessages()
+    .then( messages => {
+        messages.forEach(message => {
+            chatArea.appendChild(displayAllMessagesComponent(message))
+        })
 })
 }
 
-// function createNewMessage(userId, message) {
-//     return {
-//         userId: `${userId}`,
-//         message: `${message}`
-//     }
+function displayAllMessagesComponent(messages) {
+    let div = document.createElement("div")
+    let editBtn = document.createElement("button")
+    let div2 = document.createElement("div")
+    div2.setAttribute("id", `editFormContainer-${messages.id}`)
+    editBtn.textContent = "edit"
+    editBtn.setAttribute("type", "button")
+    div.innerHTML = `${messages.userName} : ${messages.message}`
+    let x = sessionStorage.getItem("userName")
+    let messageId = messages.id
+    if (messages.userName === x) {
+        div.appendChild(editBtn)
+        div.appendChild(div2)
+    }
+    editBtn.addEventListener("click", () => {
+    let editForm = createEditFormComponent(messages)
+    addEditFormToDOM(div2.id, editForm, messageId)
+    })
+    return div
+}
 
-// }
+function createEditFormComponent(message) {
+    return `
+    <input type="hidden" id="message-id" value=${message.id}>
+    <input id="editLine" type="text" placeholder="${message.message}"></input>
+    <button id="save-message-btn-${message.id}">save</button>
+    `
+}
 
-// getUserID()
-// .then( userData => {
-//     userData.forEach(one => {
-//         if (userId === one.id) {
-//         }})})
+function addEditFormToDOM(divElementId, editForm, messageId) {
+    document.querySelector(`#${divElementId}`).innerHTML = editForm
+    document.querySelector(`#save-message-btn-${messageId}`).addEventListener("click", () => {
+    let message = document.querySelector("#editLine").value
+    let y = sessionStorage.getItem("userId")
+    let messageIdNum = document.querySelector("#message-id").value
+    let updatedMessage = createNewMessage(y, message)
+    updatedMessage.id = messageIdNum
+    editMessage(updatedMessage)
+    .then( () => {
+        postMessages()
+    })
+    })
+}
 
 
-// function addNewChat(textInput) {
-//     return fetch(""
-// }
+function createNewMessage(uniqueUserId, userMessage) {
+    let name = sessionStorage.getItem("userName")
+    return {
+        userId: parseInt(uniqueUserId),
+        message: userMessage,
+        userName: name
+    }
+}
 
-export { createChatBoard, messageDisplay }
+//create an edit button that shows up only IFF the user matches the id for the saved message.
+
+export { createChatBoard, messageDisplay, postMessages, displayAllMessagesComponent, createNewMessage}

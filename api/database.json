@@ -1,353 +1,96 @@
 {
   "users": [
     {
-      "name": "a",
-      "email": "a",
-      "password": "a",
+      "name": "Me",
+      "email": "Me",
+      "password": "Me",
+      "id": 1
+    }
+  ],
+  "friends": [],
+  "messages": [
+    {
+      "userId": null,
+      "message": "Hi guys",
+      "userName": "Me",
       "id": 1
     },
     {
-      "name": "",
-      "email": "",
-      "password": "",
+      "userId": null,
+      "message": "blah  blah",
+      "userName": "Me",
       "id": 2
     },
     {
-      "name": "o",
-      "email": "o",
-      "password": "y",
+      "userId": null,
+      "message": "Well",
+      "userName": "Me",
       "id": 3
     },
     {
-      "name": "zz",
-      "email": "zz",
-      "password": "a",
+      "userId": null,
+      "message": "whats up yo!!",
+      "userName": "Me",
       "id": 4
     },
     {
-      "name": "jeff",
-      "email": "jeff@jeff.com",
-      "password": "t",
+      "userId": null,
+      "message": "whats up yo!!",
+      "userName": "Me",
       "id": 5
+    },
+    {
+      "userId": null,
+      "message": "whats up yo!!",
+      "userName": "Me",
+      "id": 6
+    },
+    {
+      "userId": null,
+      "message": "heyheyhey",
+      "userName": "Me",
+      "id": 7
+    },
+    {
+      "userId": null,
+      "message": "heyheyhey",
+      "userName": "Me",
+      "id": 8
+    },
+    {
+      "userId": null,
+      "message": "hello",
+      "userName": "Me",
+      "id": 9
     }
   ],
   "events": [
     {
-      "userId": 2,
-      "title": "Take out Trash",
-      "date": "2019-08-05",
-      "time": "15:05",
-      "location": "The backyard",
-      "id": 15
-    },
-    {
-      "userId": 2,
-      "title": "dfasfasf",
-      "date": "2019-07-10",
-      "time": "00:02",
-      "location": "nblah",
-      "id": 16
-    },
-    {
       "userId": 1,
-      "title": "Herman's house party",
-      "date": "2019-07-09",
-      "time": "12:59",
-      "location": "adams house",
-      "id": 17
-    },
-    {
-      "userId": 1,
-      "title": "hermans house part",
-      "date": "2019-07-09",
-      "time": "00:12",
-      "location": "adams house",
-      "id": 18
-    },
-    {
-      "userId": 5,
-      "title": "Nutshell is almost done",
-      "date": "2019-07-09",
-      "time": "00:12",
-      "location": "NSS",
-      "id": 19
-    },
-    {
-      "userId": 5,
-      "title": "Presentation",
-      "date": "2019-07-10",
-      "time": "00:12",
-      "location": "NSS",
-      "id": 20
+      "title": "party",
+      "date": "2019-07-11",
+      "time": "21:00",
+      "location": "david's house",
+      "id": 1
     }
   ],
   "news": [
     {
-      "userId": 2,
-      "url": "http://www.google.com",
-      "title": "I created this first but EDIT",
-      "synopsis": "First ",
-      "timeStamp": 1562683102097,
-      "id": 1
-    },
-    {
-      "userId": 2,
-      "url": "http://www.google.com",
-      "title": "I created this second",
-      "synopsis": "second",
-      "timeStamp": 1562681571810,
-      "id": 2
-    },
-    {
-      "userId": 2,
-      "url": "http://www.google.com",
-      "title": "I created this third",
-      "synopsis": "Third first edit",
-      "timeStamp": 1562681619086,
-      "id": 3
-    },
-    {
-      "userId": 2,
-      "url": "http://www.google.com",
-      "title": "Fifth NEW EDIT",
-      "synopsis": "5",
-      "timeStamp": 1562683379187,
-      "id": 5
-    },
-    {
       "userId": 1,
-      "url": "www.fuckthisshit.com",
-      "title": "Herman's first article",
-      "synopsis": "it's a test article",
-      "timeStamp": 1562701101371,
-      "id": 6
-    },
-    {
-      "userId": 5,
-      "url": "google.com",
-      "title": "Jeff's Article",
-      "synopsis": "let's go",
-      "timeStamp": 1562703205838,
-      "id": 7
-    }
-  ],
-  "friends": [
-    {
-      "userId": 2,
-      "url": "http://www.google.com",
-      "title": "sixth",
-      "synopsis": "6",
-      "timeStamp": 1562681898769,
-      "id": 6
-    },
-    {
-      "userId": 2,
-      "url": "http://www.google.com",
-      "title": "7",
-      "synopsis": "7",
-      "timeStamp": 1562683087895,
-      "id": 7
-    },
-    {
-      "userId": 2,
-      "url": "http://www.google.com",
-      "title": "create this last",
-      "synopsis": "last",
-      "timeStamp": 1562683353382,
-      "id": 8
-    },
-    {
-      "userId": 2,
-      "url": "http://www.google.com",
-      "title": "8",
-      "synopsis": "8",
-      "timeStamp": 1562683707472,
-      "id": 9
-    },
-    {
-      "userId": 2,
-      "url": "http://www.google.com",
-      "title": "10",
-      "synopsis": "10",
-      "timeStamp": 1562686588751,
-      "id": 10
+      "url": "whatever",
+      "title": "Danger",
+      "synopsis": "gravel road on Balsam Mountain",
+      "timeStamp": 1562705030804,
+      "id": 1
     }
   ],
   "tasks": [
     {
-      "task": "Hermans task",
-      "date": "2019-07-03",
-      "userId": 1,
-      "id": 13,
-      "complete": true
-    },
-    {
-      "task": "test task 21",
-      "date": "2019-07-03",
-      "userId": 1,
-      "id": 14,
-      "complete": false
-    },
-    {
-      "task": "test task 22",
-      "date": "2019-07-03",
-      "userId": 1,
-      "id": 15,
-      "complete": false
-    },
-    {
-      "task": "Got the Save Task to work multiple times",
-      "date": "2019-07-03",
-      "userId": 1,
-      "id": 16,
-      "complete": false
-    },
-    {
-      "task": "Did you really?",
-      "date": "2019-07-03",
-      "userId": 1,
-      "id": 17,
-      "complete": false
-    },
-    {
-      "task": "howdy",
-      "date": "2019-07-05",
-      "userId": 13,
-      "id": 31,
-      "complete": true
-    },
-    {
-      "task": "Sunday's task",
-      "date": "2019-07-07",
-      "userId": 13,
-      "id": 32,
-      "complete": true
-    },
-    {
-      "task": "checkbox is working but DOM won't refresh",
-      "date": "2019-07-07",
-      "userId": 13,
-      "id": 33,
-      "complete": true
-    },
-    {
-      "task": "does boolean work",
-      "date": "2019-07-07",
-      "userId": 13,
-      "complete": true,
-      "id": 35
-    },
-    {
-      "task": "it keeps working",
-      "date": "2019-07-08",
-      "userId": "13",
-      "complete": true,
-      "id": 36
-    },
-    {
-      "task": "it's kind of working",
-      "date": "2019-07-08",
-      "userId": 13,
-      "complete": true,
-      "id": 37
-    },
-    {
-      "task": "almost done",
-      "date": "2019-07-09",
-      "userId": 13,
-      "complete": true,
-      "id": 38
-    },
-    {
-      "task": "editing after click fixes",
-      "date": "2019-07-09",
-      "userId": 13,
-      "complete": true,
-      "id": 39
-    },
-    {
-      "task": "editing task name",
-      "date": "2019-07-09",
-      "userId": 13,
-      "complete": true,
-      "id": 40
-    },
-    {
-      "task": "asdding task",
-      "date": "2019-07-09",
-      "userId": 13,
-      "complete": true,
-      "id": 41
-    },
-    {
-      "task": "sdfgsdfgsd",
-      "date": "2019-07-09",
-      "userId": 13,
-      "complete": true,
-      "id": 42
-    },
-    {
-      "task": "keeping all event listeners",
-      "date": "2019-07-09",
-      "userId": 13,
-      "complete": true,
-      "id": 43
-    },
-    {
-      "task": "sdfgsdfg",
-      "date": "2019-07-09",
-      "userId": 13,
-      "complete": false,
-      "id": 44
-    },
-    {
-      "task": "fdgjtyudfghd",
-      "date": "2019-07-09",
-      "userId": 13,
-      "complete": false,
-      "id": 45
-    },
-    {
-      "task": "dsfhdfhgsdfgh",
-      "date": "2019-07-09",
-      "userId": 13,
-      "complete": false,
-      "id": 46
-    },
-    {
-      "task": "sadoifaseoirw3r23",
-      "date": "2019-07-09",
-      "userId": 13,
-      "complete": false,
-      "id": 47
-    },
-    {
-      "task": "34wt6wergg",
-      "date": "2019-07-09",
-      "userId": 13,
-      "complete": false,
-      "id": 48
-    },
-    {
-      "task": "looks like it's working",
-      "date": "2019-07-09",
-      "userId": 13,
-      "complete": true,
-      "id": 49
-    },
-    {
-      "task": "herman has another task",
-      "date": "2019-07-09",
+      "task": "stop talking",
+      "date": "2019-07-15",
       "userId": 1,
       "complete": false,
-      "id": 50
-    },
-    {
-      "task": "Jeff Has A Task",
-      "date": "2019-07-09",
-      "userId": 5,
-      "complete": false,
-      "id": 51
+      "id": 1
     }
   ]
 }

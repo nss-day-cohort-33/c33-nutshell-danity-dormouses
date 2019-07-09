@@ -4,9 +4,6 @@ import {createDashBoard} from "./dashboard.js"
 import {createChatBoard} from "./chats.js"
 
 
-
-
-
 if (sessionStorage.getItem("userId") === null) {
     createWelcomePage()
   }

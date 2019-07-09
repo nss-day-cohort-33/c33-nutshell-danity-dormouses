@@ -26,6 +26,7 @@ function createLoginPage() {
                     if (loginName === user.name && loginEmail === user.email && loginPassword === user.password) {
                         letThemIn = true
                         sessionStorage.setItem("userId", user.id)
+                        sessionStorage.setItem("userName", user.name)
                         createDashBoard()
                     }
                 })
