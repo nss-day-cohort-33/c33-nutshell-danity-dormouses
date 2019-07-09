@@ -22,7 +22,6 @@ function createRegisterPage() {
         return {
             name: userName,
             email: userEmail,
-            // userID: userId
         }
 
     }

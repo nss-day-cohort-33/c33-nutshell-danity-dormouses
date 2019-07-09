@@ -1,12 +1,14 @@
 import { updateTask, getTaskID, getTaskByUserID } from "./api.js";
 import {createTaskEditForm, addTaskEditFormToDom} from "./task.js"
 
+// function that defines how a task will appears in the DOM
+// added hidden input field to be used to edit the task name and set its value to the name of the task
 function makeTaskComponent(task) {
   return `
     <div id="task-container-${task.id}">
     <fieldset>
     <h3 class="task-name" id="task-name-${task.id}">${task.task}</h3>
-    <input type="hidden" id="task-id-${task.id}" value=${task.id}>
+    <input type="hidden" id="task-id-${task.id}" value="${task.task}">
     <label for="task-date"><strong>"Date to Complete"</strong></label>
     <li style="list-style-type:none" name="task-date">${task.date}</li>
     <label for="task-checkbox"><strong>"Click to Complete"</strong></label>
@@ -62,21 +64,24 @@ function markTaskComplete() {
 }
 // Defining a function to edit the task name once it is clicked
 function editTaskName() {
+// get all the task names by class
     let taskName = document.querySelectorAll(".task-name")
     for(let i = 0; i < taskName.length; i++) {
+// add click event listener to each task name
         taskName[i].addEventListener("click", () => {
             // console.log(taskName[i])
+// define variable that holds value of the task name ID
             let taskToEditId = event.target.id.split("-")[2]
-            let taskText = event.target.value
             let userId = +sessionStorage.getItem("userId")
-            let taskNameToEdit = document.querySelector(`#task-id-${taskToEditId}`)
+// define variable to hold value of hidden input field by the ID of the task name ID
+            let taskNameToEdit = document.getElementById(`task-id-${taskToEditId}`)
+// change the Type attribute of the hidden input field to text so it appears when the task name is clicked
+// the value of the hidden input field is already set to equal the name of the task
             taskNameToEdit.setAttribute("type", "text")
             console.log(taskName)
             console.log("task name clicked")
             console.log(taskToEditId)
-            // let editTaskName = createTaskEditForm(taskToEditId)
-            // console.log(createTaskEditForm(taskToEditId))
-            // addTaskEditFormToDom()
+
         })
     }
 }
