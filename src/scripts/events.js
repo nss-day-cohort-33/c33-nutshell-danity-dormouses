@@ -8,7 +8,7 @@ let eventPageContainer = document.querySelector("#event-page");
 
 function createNewEventForm() {
   eventPageContainer.innerHTML = `
-      <fieldset>
+      <fieldset class="form-group">
           <label for="event-name"><h4>Name: </h4></label>
           <input id="event-name" type="text" name="event-name" required>
           <label for="event-date"><h4>Date: </h4></label>
@@ -59,14 +59,14 @@ function renderEventSection() {
 
 let userEventsPage = oneUserEvent => {
   return `
-    <article id="eventElement-${oneUserEvent.id}">
+    <article id="eventElement-${oneUserEvent.id}" class="card">
           <h3>${oneUserEvent.title}</h3>
           <ul class="eventDetails" style="list-style-type:none">
           <li>Date: ${oneUserEvent.date}</li>
           <li>Time: ${oneUserEvent.time}</li>
           <li>Location: ${oneUserEvent.location}</li>
           </ul>
-          <button id="edit-${oneUserEvent.id}" class="editEventBtn">Edit</button>
+          <button id="edit-${oneUserEvent.id}" class="editEventBtn btn-primary">Edit</button>
           </article>
       `;
 };

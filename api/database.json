@@ -76,6 +76,14 @@
       "time": "13:00",
       "location": "Ballroom",
       "id": 18
+    },
+    {
+      "userId": 2,
+      "title": "House Warming",
+      "date": "2019-07-24",
+      "time": "13:59",
+      "location": "Someone's house",
+      "id": 19
     }
   ],
   "news": [

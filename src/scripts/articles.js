@@ -85,7 +85,7 @@ function createArticlesComponent(articles) {
     deleteBtn.textContent = "Delete"
 
     div.setAttribute("id", `editFormContainer-${articles.id}`)
-
+    elem.setAttribute("class", "card")
     li1.innerHTML = `Title: ${articles.title}`
     li2.innerHTML = `Synopsis: ${articles.synopsis}`
     li3.innerHTML = `<a href=${articles.url}>Link to Article</a>`
