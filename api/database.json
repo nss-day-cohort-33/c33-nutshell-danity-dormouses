@@ -23,25 +23,18 @@
       "email": "zz",
       "password": "a",
       "id": 4
-    }
-  ],
-  "friends": [
-    {
-      "id": 1,
-      "userId": 1,
-      "userId_fk": 2
-    }
-  ],
-  "messages": [
-    {
-      "id": 1,
-      "userId": 1,
-      "message": "Hi friends!"
     },
     {
-      "id": 2,
-      "iserId": 3,
-      "message": "Wasup?!"
+      "name": "jeff",
+      "email": "jeff@jeff.com",
+      "password": "t",
+      "id": 5
+    },
+    {
+      "name": "Pelon Plata",
+      "email": "Pelon47@email.com",
+      "password": "mastacos",
+      "id": 6
     }
   ],
   "events": [
@@ -84,6 +77,22 @@
       "time": "13:59",
       "location": "Someone's house",
       "id": 19
+    },
+    {
+      "userId": 6,
+      "title": "Party at Moon Tower",
+      "date": "2019-07-14",
+      "time": "20:30",
+      "location": "Moon Tower",
+      "id": 20
+    },
+    {
+      "userId": 6,
+      "title": "Mucha Pela Fiesta",
+      "date": "2019-07-10",
+      "time": "11:00",
+      "location": "Mi Casa",
+      "id": 21
     }
   ],
   "news": [
@@ -120,6 +129,24 @@
       "id": 5
     },
     {
+      "userId": 1,
+      "url": "www.fuckthisshit.com",
+      "title": "Herman's first article",
+      "synopsis": "it's a test article",
+      "timeStamp": 1562701101371,
+      "id": 6
+    },
+    {
+      "userId": 5,
+      "url": "google.com",
+      "title": "Jeff's Article",
+      "synopsis": "let's go",
+      "timeStamp": 1562703205838,
+      "id": 7
+    }
+  ],
+  "friends": [
+    {
       "userId": 2,
       "url": "http://www.google.com",
       "title": "sixth",
@@ -154,10 +181,25 @@
   ],
   "tasks": [
     {
-      "id": 1,
-      "task": "clean litter box",
-      "date": "now",
-      "dateCompleted": "now, now"
+      "task": "Hermans task",
+      "date": "2019-07-03",
+      "userId": 1,
+      "id": 13,
+      "complete": true
+    },
+    {
+      "task": "Clean Kitchen",
+      "date": "2019-07-10",
+      "userId": 6,
+      "complete": false,
+      "id": 14
+    },
+    {
+      "task": "Eat cheese",
+      "date": "2019-07-11",
+      "userId": 6,
+      "complete": false,
+      "id": 15
     }
   ]
 }

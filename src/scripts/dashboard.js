@@ -1,3 +1,4 @@
+import {createTaskPage} from "./task.js"
 import {createArticlesSection, postArticles, createNewArticleForm} from "./articles"
 import { renderEventSection } from "./events.js"
 import { createChatBoard, messageDisplay } from "./chats";
@@ -16,6 +17,8 @@ welcomePageContainer.innerHTML = ""
 let title = document.createElement("h1")
 title.innerHTML = "Giggle Kitty Dashboard"
 dashboardPage.prepend(title)
+
+createTaskPage()
 
 updateArticleSection(x)
 
@@ -37,6 +40,8 @@ articlesSection.innerHTML = createArticlesSection()
 postArticles(x)
 createNewArticleForm(x)
 }
+
+// createTaskPage()
 
 
 

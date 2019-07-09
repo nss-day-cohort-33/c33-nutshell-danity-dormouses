@@ -1,6 +1,5 @@
 import { getUserID, addNewUser} from "./api.js"
 import {welcomePageContainer, createWelcomePage} from "./welcome.js"
-import {createDashBoard} from "./dashboard.js"
 
 
 function createRegisterPage() {

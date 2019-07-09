@@ -76,5 +76,33 @@ function returnEventByID(eventId, oneUserEvent) {
 }
 
 
+function getTaskID(id) {
+    return fetch(`http://localhost:3000/tasks/${id}`)
+    .then ( taskData => taskData.json())
+}
 
-export {getUserID, addNewUser, getArticles, addNewArticle, deleteArticle, updateArticle, addNewEvent, getEventsForUser, getEventById, returnEventByID}
+function addNewTask(newTask) {
+    return fetch("http://localhost:3000/tasks", {
+        method: "POST",
+        headers: { "Content-Type": "application/json"},
+        body: JSON.stringify(newTask)
+    })
+.then(results => results.json())
+}
+
+function getTaskByUserID(userId) {
+    return fetch(`http://localhost:3000/tasks?userId=${userId}&complete=false`)
+    .then ( taskData => taskData.json(),
+    )
+}
+
+function updateTask(id, updatedTask) {
+    return fetch(`http://localhost:3000/tasks/${id}`, {
+      method: "PUT",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify(updatedTask)
+    })
+    .then(completedTask => completedTask.json())
+  }
+
+export {getUserID, addNewUser, getArticles, addNewArticle, deleteArticle, updateArticle, addNewEvent, getEventsForUser, getEventById, returnEventByID, addNewTask, getTaskID, getTaskByUserID, updateTask}
