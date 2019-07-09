@@ -13,6 +13,14 @@ function addNewUser(newUser) {
 .then(results => results.json())
 }
 
+function addNewMessage(newMessage) {
+    return fetch("http://localhost:3000/messages", {
+        method: "POST",
+        headers: { "Content-Type": "application/json"},
+        body: JSON.stringify(newMessage)
+})
+}
+
 function getArticles(userId) {
     return fetch(`http://localhost:3000/news?userId=${userId}&_sort=timeStamp&_order=desc`)
     .then (newsArticles => newsArticles.json())
@@ -24,6 +32,22 @@ function addNewArticle(newArticle) {
         headers: { "Content-Type": "application/json"},
         body: JSON.stringify(newArticle)
     })
+.then(results => results.json())
+}
+
+function getMessages() {
+    return fetch("http://localhost:3000/messages")
+    .then(messages => messages.json())
+}
+
+function editMessage(message) {
+    return fetch(`http://localhost:3000/messages/${message.id}`, {
+    method: "PUT",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify(message)
+})
 .then(results => results.json())
 }
 
@@ -105,4 +129,4 @@ function updateTask(id, updatedTask) {
     .then(completedTask => completedTask.json())
   }
 
-export {getUserID, addNewUser, getArticles, addNewArticle, deleteArticle, updateArticle, addNewEvent, getEventsForUser, getEventById, returnEventByID, addNewTask, getTaskID, getTaskByUserID, updateTask}
+export {getUserID, addNewUser, getArticles, addNewArticle, deleteArticle, updateArticle, addNewEvent, getEventsForUser, getEventById, returnEventByID, addNewTask, getTaskID, getTaskByUserID, updateTask, addNewMessage, getMessages, editMessage}

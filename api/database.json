@@ -1,9 +1,9 @@
 {
   "users": [
     {
-      "name": "a",
-      "email": "a",
-      "password": "a",
+      "name": "Me",
+      "email": "Me",
+      "password": "Me",
       "id": 1
     },
     {
@@ -37,7 +37,8 @@
       "id": 6
     }
   ],
-  "events": [
+  "friends": [],
+  "messages": [
     {
       "userId": 2,
       "title": "Take out Trash",
@@ -105,69 +106,45 @@
       "id": 1
     },
     {
-      "userId": 2,
-      "url": "http://www.google.com",
-      "title": "I created this second",
-      "synopsis": "second",
-      "timeStamp": 1562681571810,
+      "userId": null,
+      "message": "blah  blah",
+      "userName": "Me",
       "id": 2
     },
     {
-      "userId": 2,
-      "url": "http://www.google.com",
-      "title": "I created this third",
-      "synopsis": "Third first edit",
-      "timeStamp": 1562681619086,
+      "userId": null,
+      "message": "Well",
+      "userName": "Me",
       "id": 3
     },
     {
-      "userId": 2,
-      "url": "http://www.google.com",
-      "title": "Fifth NEW EDIT",
-      "synopsis": "5",
-      "timeStamp": 1562683379187,
+      "userId": null,
+      "message": "whats up yo!!",
+      "userName": "Me",
+      "id": 4
+    },
+    {
+      "userId": null,
+      "message": "whats up yo!!",
+      "userName": "Me",
       "id": 5
     },
     {
-      "userId": 1,
-      "url": "www.fuckthisshit.com",
-      "title": "Herman's first article",
-      "synopsis": "it's a test article",
-      "timeStamp": 1562701101371,
+      "userId": null,
+      "message": "whats up yo!!",
+      "userName": "Me",
       "id": 6
     },
     {
-      "userId": 5,
-      "url": "google.com",
-      "title": "Jeff's Article",
-      "synopsis": "let's go",
-      "timeStamp": 1562703205838,
-      "id": 7
-    }
-  ],
-  "friends": [
-    {
-      "userId": 2,
-      "url": "http://www.google.com",
-      "title": "sixth",
-      "synopsis": "6",
-      "timeStamp": 1562681898769,
-      "id": 6
-    },
-    {
-      "userId": 2,
-      "url": "http://www.google.com",
-      "title": "7",
-      "synopsis": "7",
-      "timeStamp": 1562683087895,
+      "userId": null,
+      "message": "heyheyhey",
+      "userName": "Me",
       "id": 7
     },
     {
-      "userId": 2,
-      "url": "http://www.google.com",
-      "title": "create this last",
-      "synopsis": "last",
-      "timeStamp": 1562683353382,
+      "userId": null,
+      "message": "heyheyhey",
+      "userName": "Me",
       "id": 8
     },
     {
