@@ -52,6 +52,7 @@ function markTaskComplete() {
                     document.querySelector("#task-list").innerHTML += makeTaskComponent(task)
     // Have to re-call this whole function to add the event listeners back onto the checkboxes
                     markTaskComplete()
+                    editTaskName()
                 })
           });
         });
@@ -93,6 +94,7 @@ function editTaskName() {
                             tasksArray.forEach(task => {
                                 document.querySelector("#task-list").innerHTML += makeTaskComponent(task)
                                 editTaskName()
+                                markTaskComplete()
                             })
                           } )
                       })

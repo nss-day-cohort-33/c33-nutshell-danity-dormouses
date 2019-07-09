@@ -1,6 +1,6 @@
 import { createNewTaskObj, taskPageContainer } from "./task.js";
 import { getTaskID, addNewTask, getTaskByUserID } from "./api.js";
-import { makeTaskComponent } from "./taskDOMComponents.js";
+import { makeTaskComponent, markTaskComplete, editTaskName } from "./taskDOMComponents.js";
 
 
 // Declare function that adds HTML for new task inputs and save button to DOM when Add Task button above is clicked
@@ -48,7 +48,11 @@ const createNewTask = function() {
                         document.querySelector(
                             "#task-list"
                             ).innerHTML += makeTaskComponent(task);
-                        });
+                        })
+                        document.querySelector("#task-name").value= ""
+                        document.querySelector("#task-completion-date").value= ""
+                        markTaskComplete();
+                        editTaskName()
                     });
                 });
             }

@@ -97,11 +97,11 @@
   ],
   "tasks": [
     {
-      "task": "taks 19",
+      "task": "Hermans task",
       "date": "2019-07-03",
       "userId": 1,
       "id": 13,
-      "complete": false
+      "complete": true
     },
     {
       "task": "test task 21",
@@ -153,13 +153,6 @@
       "complete": true
     },
     {
-      "task": "Mark task complete",
-      "date": "2019-07-07",
-      "userId": 13,
-      "id": 34,
-      "complete": true
-    },
-    {
       "task": "does boolean work",
       "date": "2019-07-07",
       "userId": 13,
@@ -170,15 +163,106 @@
       "task": "it keeps working",
       "date": "2019-07-08",
       "userId": "13",
-      "complete": false,
+      "complete": true,
       "id": 36
     },
     {
       "task": "it's kind of working",
       "date": "2019-07-08",
       "userId": 13,
-      "complete": false,
+      "complete": true,
       "id": 37
+    },
+    {
+      "task": "almost done",
+      "date": "2019-07-09",
+      "userId": 13,
+      "complete": true,
+      "id": 38
+    },
+    {
+      "task": "editing after click fixes",
+      "date": "2019-07-09",
+      "userId": 13,
+      "complete": true,
+      "id": 39
+    },
+    {
+      "task": "editing task name",
+      "date": "2019-07-09",
+      "userId": 13,
+      "complete": true,
+      "id": 40
+    },
+    {
+      "task": "asdding task",
+      "date": "2019-07-09",
+      "userId": 13,
+      "complete": true,
+      "id": 41
+    },
+    {
+      "task": "sdfgsdfgsd",
+      "date": "2019-07-09",
+      "userId": 13,
+      "complete": true,
+      "id": 42
+    },
+    {
+      "task": "keeping all event listeners",
+      "date": "2019-07-09",
+      "userId": 13,
+      "complete": true,
+      "id": 43
+    },
+    {
+      "task": "sdfgsdfg",
+      "date": "2019-07-09",
+      "userId": 13,
+      "complete": false,
+      "id": 44
+    },
+    {
+      "task": "fdgjtyudfghd",
+      "date": "2019-07-09",
+      "userId": 13,
+      "complete": false,
+      "id": 45
+    },
+    {
+      "task": "dsfhdfhgsdfgh",
+      "date": "2019-07-09",
+      "userId": 13,
+      "complete": false,
+      "id": 46
+    },
+    {
+      "task": "sadoifaseoirw3r23",
+      "date": "2019-07-09",
+      "userId": 13,
+      "complete": false,
+      "id": 47
+    },
+    {
+      "task": "34wt6wergg",
+      "date": "2019-07-09",
+      "userId": 13,
+      "complete": false,
+      "id": 48
+    },
+    {
+      "task": "looks like it's working",
+      "date": "2019-07-09",
+      "userId": 13,
+      "complete": true,
+      "id": 49
+    },
+    {
+      "task": "herman has another task",
+      "date": "2019-07-09",
+      "userId": 1,
+      "complete": false,
+      "id": 50
     }
   ]
 }
