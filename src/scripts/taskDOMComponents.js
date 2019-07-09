@@ -1,5 +1,4 @@
 import { updateTask, getTaskID, getTaskByUserID } from "./api.js";
-import {createTaskEditForm, addTaskEditFormToDom} from "./task.js"
 
 // function that defines how a task will appears in the DOM
 // added hidden input field to be used to edit the task name and set its value to the name of the task
@@ -82,17 +81,23 @@ function editTaskName() {
             console.log(taskName)
             console.log("task name clicked")
             console.log(taskToEditId)
+// adding a keyup event listener to the input field used to edit the task name
             document.getElementById(`task-id-${taskToEditId}`).addEventListener("keyup", () => {
+// conditional statement to see if the keyup used is the Enter key
                 if(event.keyCode === 13) {
                     console.log("enter key released")
                     getTaskID(taskToEditId).then(task => {
+// changing the task name to equal the text entered into the input edit field
                       task.task = document.getElementById(`task-id-${taskToEditId}`).value
                       console.log(task.task)
+// call the PUT function and pass in the task ID and the new task with the edited name
                       updateTask(taskToEditId, task).then( () => {
+// GET all tasks by that logged in user and populate the DOM
                           getTaskByUserID(userId).then(tasksArray => {
                             document.querySelector("#task-list").innerHTML = ""
                             tasksArray.forEach(task => {
                                 document.querySelector("#task-list").innerHTML += makeTaskComponent(task)
+// Have to call the edit function and the mark task complete function again since event listeners are removed with inner html
                                 editTaskName()
                                 markTaskComplete()
                             })

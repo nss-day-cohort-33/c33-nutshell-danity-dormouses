@@ -1,5 +1,5 @@
 import { createNewTaskObj, taskPageContainer } from "./task.js";
-import { getTaskID, addNewTask, getTaskByUserID } from "./api.js";
+import { addNewTask, getTaskByUserID } from "./api.js";
 import { makeTaskComponent, markTaskComplete, editTaskName } from "./taskDOMComponents.js";
 
 

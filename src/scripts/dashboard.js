@@ -39,6 +39,8 @@ postArticles(x)
 createNewArticleForm(x)
 }
 
+createTaskPage()
+
 
 
 
