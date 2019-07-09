@@ -1,0 +1,14 @@
+
+#event-page article:first-of-type {
+    background-color: blanchedalmond;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+.eventDetails {
+    margin: 0em;
+}
+.editEventBtn {
+    background-color: gray;
+    border-radius: .5em;
+    font: white;
+}

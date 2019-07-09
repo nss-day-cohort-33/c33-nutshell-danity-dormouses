@@ -1,3 +1,4 @@
+import { renderEventSection } from "./events.js"
 import { createChatBoard, messageDisplay } from "./chats";
 
 
@@ -8,9 +9,14 @@ function createDashBoard() {
 welcomePageContainer.innerHTML = `
 <h1>GIGGLE KITTY DASHBOARD</h1>
 `
+renderEventSection()
+
+
 chatBox.innerHTML = createChatBoard()
 messageDisplay()
 }
+
+
 
 
 
