@@ -81,11 +81,27 @@ function editTaskName() {
             console.log(taskName)
             console.log("task name clicked")
             console.log(taskToEditId)
-
+            document.getElementById(`task-id-${taskToEditId}`).addEventListener("keyup", () => {
+                if(event.keyCode === 13) {
+                    console.log("enter key released")
+                    getTaskID(taskToEditId).then(task => {
+                      task.task = document.getElementById(`task-id-${taskToEditId}`).value
+                      console.log(task.task)
+                      updateTask(taskToEditId, task).then( () => {
+                          getTaskByUserID(userId).then(tasksArray => {
+                            document.querySelector("#task-list").innerHTML = ""
+                            tasksArray.forEach(task => {
+                                document.querySelector("#task-list").innerHTML += makeTaskComponent(task)
+                                editTaskName()
+                            })
+                          } )
+                      })
+                })
+            }
         })
-    }
+    })
 }
-
+}
 
 
 export {makeTaskComponent, markTaskComplete, editTaskName}

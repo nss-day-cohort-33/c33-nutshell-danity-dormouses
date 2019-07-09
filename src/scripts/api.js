@@ -35,20 +35,6 @@ function getTaskByUserID(userId) {
     )
 }
 
-// function getIncompleteTasks(userId) {
-//     return fetch(`http://localhost:3000/tasks?userId=${userId}&complete=false`)
-//     .then ( taskData => taskData.json(),
-//     )
-// }
-
-
-function deleteTaskFromDatabase(id) {
-    return fetch(`http://localhost:3000/tasks/${id}`, {
-        method: "DELETE",
-        headers: { "Content-Type": "application/json" }
-    })
-}
-
 function updateTask(id, updatedTask) {
     return fetch(`http://localhost:3000/tasks/${id}`, {
       method: "PUT",
@@ -58,4 +44,4 @@ function updateTask(id, updatedTask) {
     .then(completedTask => completedTask.json())
   }
 
-export {getUserID, addNewUser, addNewTask, getTaskID, getTaskByUserID, deleteTaskFromDatabase, updateTask}
+export {getUserID, addNewUser, addNewTask, getTaskID, getTaskByUserID, updateTask}
