@@ -8,7 +8,7 @@ let welcomePageContainer = document.getElementById("welcome-page")
 
 
 function createDashBoard() {
-let x = parseInt(sessionStorage.getItem("UserID"))
+let x = parseInt(sessionStorage.getItem("userId"))
 console.log(x)
 
 welcomePageContainer.innerHTML = ""

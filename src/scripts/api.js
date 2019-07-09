@@ -13,7 +13,7 @@ function addNewUser(newUser) {
 }
 
 function getArticles(userId) {
-    return fetch(`http://localhost:3000/news?userId=${userId}`)
+    return fetch(`http://localhost:3000/news?userId=${userId}&_sort=timeStamp&_order=desc`)
     .then (newsArticles => newsArticles.json())
 }
 

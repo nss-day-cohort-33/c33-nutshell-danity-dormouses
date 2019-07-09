@@ -1,94 +1,28 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Herman Munson",
-      "email": "herm@adamshouse.com"
-    },
-    {
-      "id": 2,
-      "name": "Lily Munson",
-      "email": "lily@adamshouse"
-    },
-    {
-      "name": "John Smith",
-      "email": "smith@aol.com",
-      "id": 3
-    },
-    {
-      "name": "Lily Munson",
-      "email": "smith@aol.com",
-      "id": 4
-    },
-    {
-      "name": "Drew is a Dumbass",
-      "email": "idiotsRUS@helpme.com",
-      "id": 5
-    },
-    {
-      "name": "Slinky Wierdo",
-      "email": "shady@aol.com",
-      "id": 6
-    },
-    {
-      "name": "Roger Sterling",
-      "email": "blah@john.com",
-      "id": 7
-    },
-    {
-      "name": "tt22t",
-      "email": "3t3t",
-      "id": 8
+      "name": "a",
+      "email": "a",
+      "password": "a",
+      "id": 1
     },
     {
       "name": "",
       "email": "",
-      "id": 9
+      "password": "",
+      "id": 2
     },
     {
-      "name": "r",
-      "email": "r",
-      "id": 10
+      "name": "o",
+      "email": "o",
+      "password": "y",
+      "id": 3
     },
     {
-      "name": "a",
-      "email": "a",
-      "id": 11
-    },
-    {
-      "name": "4",
-      "email": "4",
-      "id": 12
-    },
-    {
-      "name": "7",
-      "email": "7",
-      "id": 13
-    },
-    {
-      "name": "e",
-      "email": "e",
-      "id": 14
-    },
-    {
-      "name": "64",
-      "email": "64",
-      "id": 15
-    },
-    {
-      "name": "bb",
-      "email": "bb",
-      "id": 16
-    },
-    {
-      "name": "ee",
-      "email": "ee",
-      "id": 17
-    },
-    {
-      "name": "s",
-      "email": "s",
-      "id": 18
+      "name": "zz",
+      "email": "zz",
+      "password": "a",
+      "id": 4
     }
   ],
   "friends": [
@@ -123,79 +57,66 @@
     {
       "userId": 2,
       "url": "http://www.google.com",
-      "title": "this is about the internet",
-      "synopsis": "a search engine",
-      "id": 10
+      "title": "I created this first but EDIT",
+      "synopsis": "First ",
+      "timeStamp": 1562683102097,
+      "id": 1
     },
     {
-      "userId": 12,
+      "userId": 2,
       "url": "http://www.google.com",
-      "title": "testing for User12",
-      "synopsis": "this is a test",
-      "id": 29
+      "title": "I created this second",
+      "synopsis": "second",
+      "timeStamp": 1562681571810,
+      "id": 2
     },
     {
-      "userId": 9,
-      "url": "",
-      "title": "",
-      "synopsis": "",
-      "id": 52
-    },
-    {
-      "userId": 9,
-      "url": "www.google.com",
-      "title": "TEST",
-      "synopsis": "TEST",
-      "id": 53
-    },
-    {
-      "userId": 12,
-      "url": "www.google.com",
-      "title": "something new",
-      "synopsis": "TEST",
-      "id": 55
-    },
-    {
-      "userId": null,
-      "url": "www.google.com",
-      "title": "something new",
-      "synopsis": "34g34g",
-      "id": 56
-    },
-    {
-      "userId": 16,
+      "userId": 2,
       "url": "http://www.google.com",
-      "title": "something new",
-      "synopsis": "34g34g",
-      "id": 57
+      "title": "I created this third",
+      "synopsis": "Third first edit",
+      "timeStamp": 1562681619086,
+      "id": 3
     },
     {
-      "userId": 17,
+      "userId": 2,
       "url": "http://www.google.com",
-      "title": "aaa",
-      "synopsis": "aaaa",
-      "id": 58
+      "title": "Fifth NEW EDIT",
+      "synopsis": "5",
+      "timeStamp": 1562683379187,
+      "id": 5
     },
     {
-      "userId": 9,
-      "url": "",
-      "title": "",
-      "synopsis": "",
-      "id": 59
-    },
-    {
-      "userId": 11,
+      "userId": 2,
       "url": "http://www.google.com",
-      "title": "gg",
-      "synopsis": "gg",
-      "id": 60
+      "title": "sixth",
+      "synopsis": "6",
+      "timeStamp": 1562681898769,
+      "id": 6
     },
     {
-      "userId": 18,
+      "userId": 2,
       "url": "http://www.google.com",
-      "title": "ss",
-      "synopsis": "fbfb",
-      "id": 61
+      "title": "7",
+      "synopsis": "7",
+      "timeStamp": 1562683087895,
+      "id": 7
+    },
+    {
+      "userId": 2,
+      "url": "http://www.google.com",
+      "title": "create this last",
+      "synopsis": "last",
+      "timeStamp": 1562683353382,
+      "id": 8
+    },
+    {
+      "userId": 2,
+      "url": "http://www.google.com",
+      "title": "8",
+      "synopsis": "8",
+      "timeStamp": 1562683707472,
+      "id": 9
     }
   ],
   "tasks": [

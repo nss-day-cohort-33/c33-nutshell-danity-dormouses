@@ -1,11 +1,6 @@
 import {getArticles, addNewArticle, deleteArticle, updateArticle} from "./api.js"
 
-
-
 let articlesSection = document.getElementById("article-page")
-// let userIdUnique = sessionStorage.getItem("UserID")
-
-
 let physicalArticles = document.getElementById("article-articles")
 
 
@@ -40,12 +35,13 @@ function saveTheArticle(userId){
     document.getElementById("save-article-btn").addEventListener("click", () => {
         console.log("you clicked")
 
+    let time = Date.now()
     let articleTitle = document.getElementById("article-title").value
     let articleSynopsis = document.getElementById("article-synopsis").value
     let articleUrl = document.getElementById("article-url").value
     let thisUserId = userId
     console.log(thisUserId)
-    let newArticleObject = createNewArticle(parseInt(thisUserId), articleTitle,articleSynopsis,articleUrl)
+    let newArticleObject = createNewArticle(parseInt(thisUserId), articleTitle, articleSynopsis, articleUrl, time)
 
     addNewArticle(newArticleObject)
     .then( () => {
@@ -82,16 +78,20 @@ function createArticlesComponent(articles) {
     elem.appendChild(editBtn)
     elem.appendChild(deleteBtn)
 
-    let userIdUnique = parseInt(sessionStorage.getItem("UserID"))
+    let userIdUnique = parseInt(sessionStorage.getItem("userId"))
     console.log(userIdUnique)
 
     editBtn.textContent = "Edit"
     deleteBtn.textContent = "Delete"
 
     div.setAttribute("id", `editFormContainer-${articles.id}`)
+
     li1.innerHTML = `Title: ${articles.title}`
     li2.innerHTML = `Synopsis: ${articles.synopsis}`
     li3.innerHTML = `<a href=${articles.url}>Link to Article</a>`
+
+
+    let thisArticleId = articles.id
 
     deleteBtn.addEventListener("click", () => {
        deleteArticle(articles.id)
@@ -102,7 +102,7 @@ function createArticlesComponent(articles) {
 
     editBtn.addEventListener("click", () => {
         let editForm = createEditFormComponent(articles)
-        addEditFormToDom(div.id, editForm, userIdUnique)
+        addEditFormToDom(div.id, editForm, userIdUnique, thisArticleId)
 
     })
 
@@ -117,20 +117,21 @@ function createEditFormComponent(article) {
     <input id="article-title" type="text" placeholder="Article Title" value="${article.title}">
     <input id="article-synopsis" type="text" placeholder="Article Synopsis" value="${article.synopsis}">
     <input id="article-url" type="text" placeholder="Article Url" value="${article.url}">
-    <button id="save-article-btn">Save Article</button>
+    <button id="save-article-btn-${article.id}">Save Article</button>
     `
 }
 
 
-function addEditFormToDom(editContainer, editForm, userID) {
+function addEditFormToDom(editContainer, editForm, userID, articleId) {
     document.querySelector(`#${editContainer}`).innerHTML = editForm
-    document.querySelector("#save-article-btn").addEventListener("click", () => {
+    document.querySelector(`#save-article-btn-${articleId}`).addEventListener("click", () => {
         let title = document.querySelector("#article-title").value
         let synopsis = document.querySelector("#article-synopsis").value
         let url = document.querySelector("#article-url").value
         let userId = document.querySelector("#article-userId").value
         let articleId = document.querySelector("#article-id").value
-        let updatedArticle = createNewArticle(userId, title, synopsis, url)
+        let time = Date.now()
+        let updatedArticle = createNewArticle(userId, title, synopsis, url, time)
         updatedArticle.id = articleId
         updateArticle(updatedArticle)
         .then ( () => {
@@ -140,13 +141,13 @@ function addEditFormToDom(editContainer, editForm, userID) {
 }
 
 
-
-function createNewArticle(userId, title, synopsis, url) {
+function createNewArticle(userId, title, synopsis, url, time) {
     return {
         userId: parseInt(userId),
         url: url,
         title: title,
-        synopsis: synopsis
+        synopsis: synopsis,
+        timeStamp: time
     }
 
 }
