@@ -18,6 +18,8 @@ let title = document.createElement("h1")
 title.innerHTML = "Giggle Kitty Dashboard"
 dashboardPage.prepend(title)
 
+createTaskPage()
+
 updateArticleSection(x)
 
 let chatBox = document.getElementById("chat-page")
@@ -39,7 +41,7 @@ postArticles(x)
 createNewArticleForm(x)
 }
 
-createTaskPage()
+// createTaskPage()
 
 
 

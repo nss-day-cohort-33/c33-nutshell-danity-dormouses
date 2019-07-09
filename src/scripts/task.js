@@ -11,19 +11,14 @@ function createTaskPage() {
     console.log("creste tsk called")
     // For testing we are just adding the task container to the welcome page
     // Eventually tasks will need to be on the dashboard
-    // welcomePageContainer.innerHTML = ""
     let userId = +sessionStorage.getItem("userId")
     let h1TaskPage = document.createElement("h1")
     let addTaskBtn = document.createElement("button")
-    // let div = document.createElement("div")
     addTaskBtn.setAttribute("id", "task-btn" )
     h1TaskPage.textContent = "Tasks To Complete"
     addTaskBtn.textContent ="Add Task"
-    // div.appendChild(addTaskBtn)
-    // taskPageContainer.appendChild(div)
     taskPageContainer.appendChild(h1TaskPage)
     taskPageContainer.appendChild(addTaskBtn)
-    // let deleteTask = document.querySelector("#")
     // Fetch call to GET all tasks by the userId of the person logged in
     // Loop through them and add them to the makeTaskComponent html string
     getTaskByUserID(userId)

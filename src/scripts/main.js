@@ -6,7 +6,6 @@ import {createChatBoard} from "./chats.js"
 
 
 
-// createWelcomePage()
 
 if (sessionStorage.getItem("userId") === null) {
     createWelcomePage()
