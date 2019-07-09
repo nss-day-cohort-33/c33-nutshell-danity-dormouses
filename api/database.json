@@ -28,8 +28,8 @@
   "friends": [
     {
       "id": 1,
-      "users_id": 1,
-      "users_id_fk": 2
+      "userId": 1,
+      "userId_fk": 2
     }
   ],
   "messages": [
@@ -46,11 +46,92 @@
   ],
   "events": [
     {
-      "id": 1,
-      "title": "Party at the Moon Tower",
-      "date": "now",
-      "time": "now",
-      "location": "Moon Tower"
+      "userId": 17,
+      "title": "Juan's Birthday",
+      "date": "2019-07-12",
+      "time": "23:00",
+      "location": "Julian's Back Yard",
+      "id": 4
+    },
+    {
+      "userId": 17,
+      "title": "Mucha Pela Fiesta",
+      "date": "2019-07-04",
+      "time": "16:00",
+      "location": "Julian's Back Yard",
+      "id": 5
+    },
+    {
+      "userId": 17,
+      "title": "Free Bird Party",
+      "date": "2019-07-10",
+      "time": "17:00",
+      "location": "Moon Tower",
+      "id": 6
+    },
+    {
+      "userId": 9,
+      "title": "Sherman's March",
+      "date": "2019-07-30",
+      "time": "19:00",
+      "location": "Georgia",
+      "id": 7
+    },
+    {
+      "userId": 18,
+      "title": "Jay Z is Bartending",
+      "date": "2019-07-16",
+      "time": "21:00",
+      "location": "Beyonce's house",
+      "id": 8
+    },
+    {
+      "userId": 17,
+      "title": "Pelon graduation",
+      "date": "2019-07-23",
+      "time": "03:00",
+      "location": "Home",
+      "id": 9
+    },
+    {
+      "userId": 9,
+      "title": "Get Down",
+      "date": "2019-07-09",
+      "time": "13:00",
+      "location": "Barn",
+      "id": 10
+    },
+    {
+      "userId": 9,
+      "title": "Dang Party",
+      "date": "2019-07-02",
+      "time": "16:01",
+      "location": "Dang 'ol list",
+      "id": 11
+    },
+    {
+      "userId": 17,
+      "title": "Amigos",
+      "date": "2019-07-31",
+      "time": "00:00",
+      "location": "Friend's house",
+      "id": 12
+    },
+    {
+      "userId": 17,
+      "title": "Homey time",
+      "date": "2019-07-10",
+      "time": "02:00",
+      "location": "Here",
+      "id": 13
+    },
+    {
+      "userId": 17,
+      "title": "a;lkdfja;lkdjf",
+      "date": "2019-07-01",
+      "time": "02:01",
+      "location": "here",
+      "id": 14
     }
   ],
   "news": [

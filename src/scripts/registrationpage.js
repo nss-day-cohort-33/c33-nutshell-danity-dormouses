@@ -15,7 +15,6 @@ function createRegisterPage() {
     <button id="return-to-welcomepage2">Return to Welcome Page</button>
     `
 
-
     document.getElementById("return-to-welcomepage2").addEventListener("click", () => {
         createWelcomePage()
     })
@@ -26,7 +25,6 @@ function createRegisterPage() {
             email: userEmail,
             password: passwordinput
         }
-
     }
 
     document.getElementById("registration-button-submit").addEventListener("click", () => {
@@ -38,7 +36,7 @@ function createRegisterPage() {
         let isThereAUser = false
 
 
-        getUserID()
+         getUserID()
         .then( userData => {
             userData.forEach(user => {
                 if (registerName === user.name || registerEmail === user.email) {

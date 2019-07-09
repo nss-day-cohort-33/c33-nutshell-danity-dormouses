@@ -1,4 +1,5 @@
 import {createArticlesSection, postArticles, createNewArticleForm} from "./articles"
+import { renderEventSection } from "./events.js"
 import { createChatBoard, messageDisplay } from "./chats";
 
 let dashboardPage = document.getElementById("dashboard-page")
@@ -19,9 +20,14 @@ dashboardPage.prepend(title)
 updateArticleSection(x)
 
 let chatBox = document.getElementById("chat-page")
+
+renderEventSection()
+
+
 chatBox.innerHTML = createChatBoard()
 messageDisplay()
 }
+
 
 
 
@@ -31,6 +37,8 @@ articlesSection.innerHTML = createArticlesSection()
 postArticles(x)
 createNewArticleForm(x)
 }
+
+
 
 
 
