@@ -1,4 +1,9 @@
 
+
+.registration-header {
+    text-align: center;
+    background-color: blue;
+}
 #event-page article:first-of-type {
     background-color: blanchedalmond;
     font-size: 1.25em;
