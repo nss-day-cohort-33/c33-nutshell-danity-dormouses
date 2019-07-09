@@ -23,18 +23,12 @@ function addNewEvent(newEvent) {
 }
 
 function getEventsForUser(userId) {
-    return fetch(`http://localhost:3000/events?userId=${userId}&_sort=date`, {
-        method: "GET",
-        headers: { "Content-Type": "application/json"}
-    })
+    return fetch(`http://localhost:3000/events?userId=${userId}&_sort=date`)
     .then(userEvents => userEvents.json())
 }
 
 function getEventById(eventId) {
-    return fetch(`http://localhost:3000/events/${eventId}`, {
-    method: "GET",
-    headers: { "Content-Type": "application/json"}
-})
+    return fetch(`http://localhost:3000/events/${eventId}`)
     .then(oneUserEvent => oneUserEvent.json())
 }
 
@@ -44,7 +38,7 @@ function returnEventByID(eventId, oneUserEvent) {
         headers: { "Content-Type": "application/json"},
         body: JSON.stringify(oneUserEvent)
     })
-        .then(updatedEvents => updatedEvents.json())
+    .then(updatedEvents => updatedEvents.json())
 }
 
 

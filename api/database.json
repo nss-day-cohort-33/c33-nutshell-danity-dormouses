@@ -169,11 +169,35 @@
     },
     {
       "userId": 9,
-      "title": "",
-      "date": "",
-      "time": "",
-      "location": "",
+      "title": "Dang Party",
+      "date": "2019-07-02",
+      "time": "16:01",
+      "location": "Dang 'ol list",
       "id": 11
+    },
+    {
+      "userId": 17,
+      "title": "Amigos",
+      "date": "2019-07-31",
+      "time": "00:00",
+      "location": "Friend's house",
+      "id": 12
+    },
+    {
+      "userId": 17,
+      "title": "Homey time",
+      "date": "2019-07-10",
+      "time": "02:00",
+      "location": "Here",
+      "id": 13
+    },
+    {
+      "userId": 17,
+      "title": "a;lkdfja;lkdjf",
+      "date": "2019-07-01",
+      "time": "02:01",
+      "location": "here",
+      "id": 14
     }
   ],
   "news": [

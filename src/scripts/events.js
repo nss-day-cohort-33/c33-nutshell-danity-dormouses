@@ -1,4 +1,4 @@
-import { addNewEvent, getEventsForUser, getEventById, returnEventByID } from "./api.js";
+import { addNewEvent, getEventsForUser, getEventById, returnEventByID} from "./api.js";
 
 // Define variable to target html container by id for events
 
@@ -40,14 +40,18 @@ function renderEventSection() {
     `;
   getEventsForUser(sessionStorage.getItem("userId")).then(usersEvents => {
     usersEvents.forEach(userEvent => {
-    eventPageContainer.innerHTML += userEventsPage(userEvent);
+    let userEventDate = Date.parse(userEvent.date)
+        if (userEventDate > Date.now()) {
+      eventPageContainer.innerHTML += userEventsPage(userEvent);
+        }
     });
     document.querySelector("#new-event").addEventListener("click", () => {
-    createNewEventForm();
+      createNewEventForm();
     });
     editBtnListener();
   });
 }
+
 
 // Define a function that takes an argument of the object oneUserEvent and returns an html string which contains the properties of the object.
 
@@ -75,8 +79,8 @@ function editBtnListener() {
       let editBtnIdNum = editBtnIdArray[1];
       console.log(editBtnIdNum);
       getEventById(editBtnIdNum).then(oneUserEvent => {
-        let editEventForm = `<fieldset>
-
+        let editEventForm = `
+        <fieldset>
           <label for="event-name"><h4>Name: </h4></label>
           <input id="event-name" type="text" name="event-name" value="${oneUserEvent.title}" required>
           <label for="event-date"><h4>Date: </h4></label>
@@ -88,29 +92,29 @@ function editBtnListener() {
           <button id="saveEvent-${oneUserEvent.id}">Save Event</button>
       </fieldset>
 `;
-// Write new event listener for saving the edited event and PUT all events, including newly edited on back in db and DOM by UserId
+        // Write new event listener for saving the edited event and PUT all events, including newly edited on back in db and DOM by UserId
         let editFormContainer = document.querySelector(`#eventElement-${oneUserEvent.id}`);
         editFormContainer.innerHTML = editEventForm;
-        document.querySelector(`#saveEvent-${oneUserEvent.id}`).addEventListener("click", event => {
+        document.querySelector(`#saveEvent-${oneUserEvent.id}`)
+          .addEventListener("click", event => {
             let saveBtn = event.target.id;
             let editedEvent = saveBtn.split("-");
             let editBtnIdNum = editedEvent[1];
             let updatedEvent = {
-                userId: +sessionStorage.getItem("userId"),
-                title: document.querySelector("#event-name").value,
-                date: document.querySelector("#event-date").value,
-                time: document.querySelector("#event-time").value,
-                location: document.querySelector("#event-location").value
-            }
+              userId: +sessionStorage.getItem("userId"),
+              title: document.querySelector("#event-name").value,
+              date: document.querySelector("#event-date").value,
+              time: document.querySelector("#event-time").value,
+              location: document.querySelector("#event-location").value
+            };
             returnEventByID(editBtnIdNum, updatedEvent).then( () => {
-                    renderEventSection();
-                    editBtnListener();
-            })
+              renderEventSection();
+              editBtnListener();
+            });
+          });
       });
-    })
+    });
   });
-})
 }
 
-
-export { renderEventSection }
+export { renderEventSection };
