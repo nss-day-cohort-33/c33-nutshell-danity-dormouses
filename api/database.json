@@ -1,128 +1,96 @@
 {
   "users": [
     {
-      "name": "",
-      "email": "",
-      "password": "",
+      "name": "Me",
+      "email": "Me",
+      "password": "Me",
       "id": 1
-    },
-    {
-      "name": "a",
-      "email": "a",
-      "password": "a",
-      "id": 2
-    },
-    {
-      "name": "b",
-      "email": "b",
-      "password": "b",
-      "id": 3
-    },
-    {
-      "name": "c",
-      "email": "c",
-      "password": "c",
-      "id": 4
-    },
-    {
-      "name": "mjb",
-      "email": "mjb",
-      "password": "mjb",
-      "id": 5
-    },
-    {
-      "name": "Jordan",
-      "email": "Jordan",
-      "password": "Jordan",
-      "id": 6
-    },
-    {
-      "name": "Adam",
-      "email": "Adam",
-      "password": "Adam",
-      "id": 7
     }
   ],
-  "friends": [
-    {
-      "id": 1,
-      "users_id": 1,
-      "users_id_fk": 2
-    }
-  ],
+  "friends": [],
   "messages": [
     {
       "userId": null,
-      "message": "Good morning! Did you remember to order Clif Bars today?",
-      "userName": "Jordan",
+      "message": "Hi guys",
+      "userName": "Me",
       "id": 1
     },
     {
-      "userId": 2,
-      "message": "Yeah.",
-      "userName": "mjb",
+      "userId": null,
+      "message": "blah  blah",
+      "userName": "Me",
       "id": 2
     },
     {
-      "userId": 5,
-      "message": "you misspelled hey",
-      "userName": "mjb",
+      "userId": null,
+      "message": "Well",
+      "userName": "Me",
       "id": 3
     },
     {
       "userId": null,
-      "message": "Sweet. Thanks, Mel Mel!",
-      "userName": "Jordan",
+      "message": "whats up yo!!",
+      "userName": "Me",
       "id": 4
     },
     {
       "userId": null,
-      "message": "Hi guys!!",
-      "userName": "Jordan",
+      "message": "whats up yo!!",
+      "userName": "Me",
       "id": 5
     },
     {
-      "userId": 5,
-      "message": "come on now",
-      "userName": "mjb",
+      "userId": null,
+      "message": "whats up yo!!",
+      "userName": "Me",
       "id": 6
     },
     {
-      "userId": 7,
-      "message": "Hi, it's Adam!",
-      "userName": "Adam",
+      "userId": null,
+      "message": "heyheyhey",
+      "userName": "Me",
       "id": 7
     },
     {
-      "userId": 7,
-      "message": "Guys, I accidentally deleted the quotation marks that WERE surrounding my \"sent\" messages. #oops",
-      "userName": "Adam",
+      "userId": null,
+      "message": "heyheyhey",
+      "userName": "Me",
       "id": 8
+    },
+    {
+      "userId": null,
+      "message": "hello",
+      "userName": "Me",
+      "id": 9
     }
   ],
   "events": [
     {
-      "id": 1,
-      "title": "Party at the Moon Tower",
-      "date": "now",
-      "time": "now",
-      "location": "Moon Tower"
+      "userId": 1,
+      "title": "party",
+      "date": "2019-07-11",
+      "time": "21:00",
+      "location": "david's house",
+      "id": 1
     }
   ],
   "news": [
     {
-      "id": 1,
-      "url": "https://www.imdb.com/title/tt0387808/",
-      "title": "End of the World",
-      "synopsis": "Pestilence, War, Famine, Death"
+      "userId": 1,
+      "url": "whatever",
+      "title": "Danger",
+      "synopsis": "gravel road on Balsam Mountain",
+      "timeStamp": 1562705030804,
+      "id": 1
     }
   ],
   "tasks": [
     {
-      "id": 1,
-      "task": "clean litter box",
-      "date": "now",
-      "dateCompleted": "now, now"
+      "task": "stop talking",
+      "date": "2019-07-15",
+      "userId": 1,
+      "complete": false,
+      "id": 1
     }
   ]
 }

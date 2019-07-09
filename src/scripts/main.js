@@ -1,12 +1,15 @@
 
-import {createWelcomePage,} from "./welcome.js"
+import {createWelcomePage} from "./welcome.js"
+import {createDashBoard} from "./dashboard.js"
 import {createChatBoard} from "./chats.js"
-import { createDashBoard } from "./dashboard.js"
+
 
 if (sessionStorage.getItem("userId") === null) {
-  createWelcomePage()
-}
+    createWelcomePage()
+  }
 
-else {
-  createDashBoard()
-}
+  else {
+    createDashBoard()
+  }
+
+
