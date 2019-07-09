@@ -47,8 +47,6 @@ function updateArticle(updatedArticle) {
 
 }
 
-
-export {getUserID, addNewUser, getArticles, addNewArticle, deleteArticle, updateArticle}
 function addNewEvent(newEvent) {
     return fetch("http://localhost:3000/events", {
         method: "POST",
@@ -79,6 +77,4 @@ function returnEventByID(eventId, oneUserEvent) {
 
 
 
-
-
-export {getUserID, addNewUser, addNewEvent, getEventsForUser, getEventById, returnEventByID}
+export {getUserID, addNewUser, getArticles, addNewArticle, deleteArticle, updateArticle, addNewEvent, getEventsForUser, getEventById, returnEventByID}
