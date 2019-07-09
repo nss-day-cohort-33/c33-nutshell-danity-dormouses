@@ -55,11 +55,27 @@
     },
     {
       "userId": 2,
-      "title": "dfasfasf",
-      "date": "2019-07-10",
+      "title": "Birthday",
+      "date": "2019-07-31",
       "time": "00:02",
       "location": "nblah",
       "id": 16
+    },
+    {
+      "userId": 2,
+      "title": "My dang party",
+      "date": "2019-07-22",
+      "time": "01:00",
+      "location": "Mi Casa",
+      "id": 17
+    },
+    {
+      "userId": 2,
+      "title": "Quinciñera",
+      "date": "2019-08-14",
+      "time": "13:00",
+      "location": "Ballroom",
+      "id": 18
     }
   ],
   "news": [
@@ -68,7 +84,7 @@
       "url": "http://www.google.com",
       "title": "I created this first but EDIT",
       "synopsis": "First ",
-      "timeStamp": 1562683102097,
+      "timeStamp": 1562691318033,
       "id": 1
     },
     {
@@ -122,18 +138,10 @@
     {
       "userId": 2,
       "url": "http://www.google.com",
-      "title": "8",
-      "synopsis": "8",
-      "timeStamp": 1562683707472,
+      "title": "9",
+      "synopsis": "9",
+      "timeStamp": 1562691305972,
       "id": 9
-    },
-    {
-      "userId": 2,
-      "url": "http://www.google.com",
-      "title": "10",
-      "synopsis": "10",
-      "timeStamp": 1562686588751,
-      "id": 10
     }
   ],
   "tasks": [

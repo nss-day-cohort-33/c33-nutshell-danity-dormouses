@@ -36,7 +36,9 @@ function createNewEventForm() {
 
 function renderEventSection() {
   eventPageContainer.innerHTML = `
+    <h2>Events Section</h2>
     <button id="new-event">New Event</button>
+    <h3>My Events</h3>
     `;
   getEventsForUser(sessionStorage.getItem("userId")).then(usersEvents => {
     usersEvents.forEach(userEvent => {
