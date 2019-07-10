@@ -59,9 +59,9 @@ function renderEventSection() {
 
 let userEventsPage = oneUserEvent => {
   return `
-    <article id="eventElement-${oneUserEvent.id}" class="card">
+    <article id="eventElement-${oneUserEvent.id}">
           <h3>${oneUserEvent.title}</h3>
-          <ul class="eventDetails" style="list-style-type:none">
+          <ul>
           <li>Date: ${oneUserEvent.date}</li>
           <li>Time: ${oneUserEvent.time}</li>
           <li>Location: ${oneUserEvent.location}</li>

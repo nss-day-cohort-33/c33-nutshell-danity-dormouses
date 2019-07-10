@@ -6,11 +6,15 @@
 }
 #event-page article:first-of-type {
     background-color: blanchedalmond;
-    font-size: 1.25em;
+    font-size: 1.50em;
     font-weight: bold;
+}
+#event-page article:first-of-type h3 {
+    font-weight: 900;
 }
 .eventDetails {
     margin: 0em;
+    list-style-type: none;
 }
 .editEventBtn {
     background-color: gray;

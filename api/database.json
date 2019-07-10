@@ -38,7 +38,7 @@
     }
   ],
   "friends": [],
-  "messages": [
+  "events": [
     {
       "userId": 2,
       "title": "Take out Trash",
@@ -94,6 +94,22 @@
       "time": "11:00",
       "location": "Mi Casa",
       "id": 21
+    },
+    {
+      "userId": 1,
+      "title": "Party",
+      "date": "2019-07-16",
+      "time": "04:00",
+      "location": "Juan's house",
+      "id": 22
+    },
+    {
+      "userId": 1,
+      "title": "Fiesta",
+      "date": "2019-07-23",
+      "time": "15:06",
+      "location": "John's house",
+      "id": 23
     }
   ],
   "news": [
