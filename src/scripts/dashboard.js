@@ -20,9 +20,9 @@ createTaskPage()
 updateArticleSection(x)
 let chatBox = document.getElementById("chat-page")
 renderEventSection()
+postMessages()
 chatBox.innerHTML = createChatBoard()
 messageDisplay()
-postMessages()
 }
 
 

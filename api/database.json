@@ -5,63 +5,69 @@
       "email": "Me",
       "password": "Me",
       "id": 1
+    },
+    {
+      "name": "Hunter",
+      "email": "Hunter",
+      "password": "Hunter",
+      "id": 2
+    },
+    {
+      "name": "MJB",
+      "email": "MJB",
+      "password": "MJB",
+      "id": 3
     }
   ],
   "friends": [],
   "messages": [
     {
       "userId": null,
-      "message": "Hi guys",
-      "userName": "Me",
+      "message": "Good morning, friends!",
+      "userName": "Hunter",
       "id": 1
     },
     {
       "userId": null,
-      "message": "blah  blah",
-      "userName": "Me",
+      "message": "I made an h2 for this chat board today at about 7am. What were you guys up to at that time? Was anyone frying up some bacon?",
+      "userName": "Hunter",
       "id": 2
     },
     {
       "userId": null,
-      "message": "Well",
-      "userName": "Me",
+      "message": "Hi, Hunter!",
+      "userName": "MJB",
       "id": 3
     },
     {
       "userId": null,
-      "message": "whats up yo!!",
-      "userName": "Me",
+      "message": "I WISH. Bacon is delicious but doesn't digest well for me that early in the day. I prefer PB&J toast.",
+      "userName": "MJB",
       "id": 4
     },
     {
       "userId": null,
-      "message": "whats up yo!!",
-      "userName": "Me",
+      "message": "What did YOU eat?",
+      "userName": "MJB",
       "id": 5
     },
     {
       "userId": null,
-      "message": "whats up yo!!",
-      "userName": "Me",
+      "message": "Nothing. Making breakfast is too much work.",
+      "userName": "Hunter",
       "id": 6
     },
     {
       "userId": null,
-      "message": "heyheyhey",
-      "userName": "Me",
+      "message": "Is Jeff here yet?",
+      "userName": "Hunter",
       "id": 7
     },
     {
       "userId": null,
-      "message": "heyheyhey",
-      "userName": "Me",
+      "message": "I haven't seen him...",
+      "userName": "MJB",
       "id": 8
-    },
-    {
-      "userId": null,
-      "message": "hello",
-      "userName": "Me",
-      "id": 9
     }
   ],
   "events": [
@@ -72,6 +78,14 @@
       "time": "21:00",
       "location": "david's house",
       "id": 1
+    },
+    {
+      "userId": 2,
+      "title": "Awkward Couples' Night",
+      "date": "2019-07-11",
+      "time": "21:00",
+      "location": "David's House",
+      "id": 2
     }
   ],
   "news": [
@@ -82,6 +96,14 @@
       "synopsis": "gravel road on Balsam Mountain",
       "timeStamp": 1562705030804,
       "id": 1
+    },
+    {
+      "userId": 2,
+      "url": "http://maryannmelton.blogspot.com/2011/01/balsam-mountain-road.html",
+      "title": "Danger",
+      "synopsis": "Gravel Road on Balsam Mountain!",
+      "timeStamp": 1562760104827,
+      "id": 2
     }
   ],
   "tasks": [
@@ -91,6 +113,13 @@
       "userId": 1,
       "complete": false,
       "id": 1
+    },
+    {
+      "task": "Go to Kroger",
+      "date": "2019-07-10",
+      "userId": 2,
+      "complete": false,
+      "id": 2
     }
   ]
 }

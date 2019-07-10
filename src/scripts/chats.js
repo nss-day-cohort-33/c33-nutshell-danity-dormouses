@@ -28,7 +28,7 @@ function messageDisplay() {
 }
 
 function postMessages() {
-    chatArea.innerHTML = ""
+    chatArea.innerHTML = `<h2>Chat Board</h2>`
     getMessages()
     .then( messages => {
         messages.forEach(message => {
